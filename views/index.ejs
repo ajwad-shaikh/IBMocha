@@ -113,11 +113,20 @@
 
     <% if(data){ %>
     <p>You pressed submit button</p>
-    <h1>Res</h1>
+    <h2 class="center">Critical Exposure</h2>
     <!-- <%=JSON.stringify(emails)%> -->
-    <table>
+    <table class="table table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Exposed Email Address</th>
+        <th scope="col">Relevance</th>
+        <th scope="col">Count</th>
+      </tr>
+    </thead>
     <% for(var i=0; i < emails.length; i++) { %>
-       <tr>
+       <tr class="table-danger">
+         <td><%= i+1 %></td>
          <td><%= emails[i].text %></td>
          <td><%= emails[i].relevance %></td>
          <td><%= emails[i].count %></td>
@@ -125,9 +134,19 @@
     <% } %>
     </table>
     <!-- <%=JSON.stringify(persons)%> -->
-    <table>
+    <h2 class="center">High Risk Exposure</h2>
+    <table class="table table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Exposed Person Name</th>
+        <th scope="col">Relevance</th>
+        <th scope="col">Count</th>
+      </tr>
+    </thead>
     <% for(var i=0; i < persons.length; i++) { %>
-       <tr>
+       <tr class="table-warning">
+         <td><%= i+1 %></td>
          <td><%= persons[i].text %></td>
          <td><%= persons[i].relevance %></td>
          <td><%= persons[i].count %></td>
