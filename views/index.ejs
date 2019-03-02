@@ -61,6 +61,25 @@
         font-weight:700;
 	      font-size:calc(70.25*1.5)%;
       }
+
+      .progress {
+        height: 35px;
+      }
+      .progress .skill {
+        line-height: 35px;
+        padding: 0;
+        margin: 0 0 0 20px;
+        text-transform: uppercase;
+      }
+      .progress .skill .val {
+        float: right;
+        font-style: normal;
+        margin: 0 20px 0 0;
+      }
+      .progress-bar {
+        text-align: left;
+        transition-duration: 3s;
+      }
     </style>
 
   </head>
@@ -145,12 +164,18 @@
       </tr>
     </thead>
     <% for(var i=0; i < emails.length; i++) { %>
+      <!--
        <tr class="table-danger">
          <td><%= i+1 %></td>
          <td><%= emails[i].text %></td>
          <td><%= emails[i].relevance %></td>
          <td><%= emails[i].count %></td>
-       </tr>
+       </tr>-->
+       <div class="progress skill-bar ">
+           <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= 100*(emails[i].relevance) %>" aria-valuemin="0" aria-valuemax="100">
+               <span class="skill"><%= emails[i].text %> (Count: <%= emails[i].count %>)<i class="val"><%= emails[i].relevance*100 %>%</i></span>
+           </div>
+       </div> 
     <% } %>
     </table>
     <!-- <%=JSON.stringify(persons)%> -->
@@ -165,12 +190,18 @@
       </tr>
     </thead>
     <% for(var i=0; i < persons.length; i++) { %>
+      <!--
        <tr class="table-warning">
          <td><%= i+1 %></td>
          <td><%= persons[i].text %></td>
          <td><%= persons[i].relevance %></td>
          <td><%= persons[i].count %></td>
-       </tr>
+       </tr>-->
+       <div class="progress skill-bar "> 
+           <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= 100*(persons[i].relevance) %>" aria-valuemin="0" aria-valuemax="100">
+               <span class="skill"><%= persons[i].text %> (Count: <%= persons[i].count %>)<i class="val"><%= persons[i].relevance*100 %>%</i></span>
+           </div>
+       </div>
     <% } %>
     </table>
     <% } %>
@@ -212,5 +243,14 @@
           }
         })();
       </script>
+      <script type="text/javascript">
+        $(document).ready(function() {
+             $('.progress .progress-bar').css("width",
+                       function() {
+                           return $(this).attr("aria-valuenow") + "%";
+                       }
+               )
+           });
+       </script>
   </body>
 </html>
