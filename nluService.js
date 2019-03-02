@@ -24,8 +24,17 @@ exports.get = (url, features, callback) => {
     nlu.analyze(parameters, (err, res) => {
         if (err) console.error(err);
 
+        let persons = res.entities.filter(ele => ele.type=="Person");
+        persons.sort((a, b) => {return b.relevance - a.relevance})
+        let emails = res.entities.filter(ele => ele.type=="EmailAddress" )
+        emails.sort((a, b) => {return b.relevance - a.relevance})        
+        // console.log({persons});    
+        // console.log({emails});    
+        // console.log('entites',res.entities);
+        // console.log('keyword',res.keywords);
+
         if (callback) {
-            callback(res, err);
+            callback(persons, emails, err);
         }
     });
 }

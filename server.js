@@ -15,12 +15,13 @@ app.get('/', (req, res) => {
 
 app.post('/', (req, res) => {
 	let req_url = req.body.url;
-	nlu.get(req_url, {}, (data, err) => {
-		console.log(data);
+	nlu.get(req_url, {}, (persons, emails, err) => {
+		console.log(persons);
+		console.log(emails);
 		if (err) {
 			res.render('index', { data: true});
 		}
-		res.render('index', { data: true, res: JSON.stringify(data) });
+		res.render('index', { data: true, emails: emails, persons:persons  });
 	});
 })
 
