@@ -9,25 +9,23 @@ const nlu = new NLU({
 });
 
 
-exports.get = function(url,features,callback){
+exports.get = (url, features, callback) => {
     let parameters = {
         'url': url,
         'features': {
-            'sentiment':{},
-            'categories':{},
-            'concepts':{},
-            'keywords':{},
-            'entities':{}
+            'sentiment': {},
+            'categories': {},
+            'concepts': {},
+            'keywords': {},
+            'entities': {},
         },
     };
-    
-    nlu.analyze(parameters,(err, res)=>{
-        if(err){
-            console.error(err);
-            return;
-        }
-        if(callback){
-            callback(res);
+
+    nlu.analyze(parameters, (err, res) => {
+        if (err) console.error(err);
+
+        if (callback) {
+            callback(res, err);
         }
     });
 }
