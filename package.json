@@ -8,7 +8,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "serve": "./node_modules/nodemon/bin/nodemon.js server.js"
+    "serve": "./node_modules/nodemon/bin/nodemon.js server.js",
+    "win-serve": "nodemon server.js"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
