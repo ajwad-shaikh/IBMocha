@@ -14,8 +14,10 @@ app.get('/', (req, res) => {
 })
 
 app.post('/', (req, res) => {
-	let req_url = req.body.url;
-	nlu.get(req_url, {}, (persons, emails, err) => {
+	let reqUrl = req.body.url;
+	let reqText = req.body.text;
+
+	nlu.get(reqUrl || reqText, {}, (persons, emails, err) => {
 		console.log(persons);
 		console.log(emails);
 		if (err) {
