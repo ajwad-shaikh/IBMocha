@@ -13,7 +13,8 @@
     "cheerio": "^1.0.0-rc.2",
     "express": "^4.16.4",
     "request": "^2.88.0",
-    "request-promise": "^4.2.2"
+    "request-promise": "^4.2.2",
+    "watson-developer-cloud": "^3.18.1"
   },
   "engines": {
     "node": "8.x"
