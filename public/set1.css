@@ -1,0 +1,127 @@
+.input {
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	margin: 1em;
+	max-width: 650px;
+	width: 100%;
+	vertical-align: top;
+}
+
+.input__field {
+	position: relative;
+	display: block;
+	float: right;
+	padding: 0.8em;
+	width: 60%;
+	border: none;
+	border-radius: 0;
+	background: #f0f0f0;
+	color: #aaa;
+	font-weight: bold;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	-webkit-appearance: none; /* for box shadows to show on iOS */
+}
+
+.input__field:focus {
+	outline: none;
+}
+
+.input__label {
+	display: inline-block;
+	float: right;
+	padding: 0 1em;
+	width: 40%;
+	color: #6a7989;
+	font-weight: bold;
+	font-size: 70.25%;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.input__label-content {
+	position: relative;
+	display: block;
+	padding: 1.6em 0;
+	width: 100%;
+}
+
+.graphic {
+	position: absolute;
+	top: 0;
+	left: 0;
+	fill: none;
+}
+
+.icon {
+	color: #ddd;
+	font-size: 150%;
+}
+
+/* Shoko */
+.input--shoko {
+	overflow: hidden;
+	padding-bottom: 2.5em;
+}
+
+.input__field--shoko {
+	padding: 0;
+	margin-top: 1.2em;
+	width: 100%;
+	background: transparent;
+	color: #fff;
+	font-size: 1.55em;
+}
+
+.input__label--shoko {
+	position: absolute;
+	top: 2em;
+	left: 0;
+	display: block;
+	width: 100%;
+	text-align: left;
+	padding: 0em;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #2f3238;
+	pointer-events: none;
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+	-webkit-transition: -webkit-transform 0.2s 0.1s, color 0.3s;
+	transition: transform 0.2s 0.1s, color 0.3s;
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+}
+
+.graphic--shoko {
+	stroke: #2f3238;
+	pointer-events: none;
+	stroke-width: 2px;
+	top: 1.25em;
+	bottom: 0px;
+	height: 3.275em;
+	-webkit-transition: -webkit-transform 0.7s, stroke 0.7s;
+	transition: transform 0.7s, stroke 0.7s;
+	-webkit-transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+	transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+} 
+
+.input__field--shoko:focus + .input__label--shoko,
+.input--filled .input__label--shoko{
+	color: #42454a;
+	-webkit-transform: translate3d(0, 3.5em, 0) scale3d(0.85, 0.85, 1);
+	transform: translate3d(0, 3.5em, 0) scale3d(0.85, 0.85, 1);
+}
+
+.input__field--shoko:focus ~ .graphic--shoko,
+.input--filled .graphic--shoko{
+	stroke: #42454a;
+	-webkit-transform: translate3d(-66.6%, 0, 0);
+	transform: translate3d(-66.6%, 0, 0);
+}
