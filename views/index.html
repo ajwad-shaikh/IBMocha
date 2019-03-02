@@ -11,7 +11,7 @@
 <html lang="en">
   <head>
     <title>Welcome to Glitch!</title>
-    <meta name="description" content="A cool thing made with Glitch">
+    <meta name="description" content="IBMocha">
     <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,29 +19,44 @@
 
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="/style.css">
-    
+
     <!-- import the webpage's client-side javascript file -->
     <script src="/client.js" defer></script>
+    <script src="/formHandler.js" defer></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">  </script>
+    <script>
+      $(document).ready(function(){
+        var url;
+        $("#submit").click(function(){
+          url=$("#url").val();
+          $.post("http://localhost:8008/login",{url: url}, function(data){
+            if(data==='done')
+              {
+                alert("post success");
+              }
+          });
+        });
+      });
+    </script>
+
   </head>
   <body>
     <header>
       <h1>
-        A Dream of the Future
+        IBMocha
       </h1>
     </header>
 
     <main>
       <p class="bold">Oh hi,</p>
-      
-      <p>Tell me your hopes and dreams:</p>
-      
-      <form>
-        <input name="dream" type="text" maxlength="100" placeholder="Dreams!" aria-labelledby="submit-dream">
-        <button type="submit" id="submit-dream">Submit Dream</button>
-      </form>
-      
-      <section class="dreams">
-        <ul id="dreams"></ul>
+
+      <p>Let's make world a safer place!</p>
+
+        <input name="url" id = "url" type="text" maxlength="1000" placeholder="URL to your web resource" aria-labelledby="submit">
+        <button type="submit" id="submit">Analyse!</button>
+
+      <section class="url">
+        <ul id="url"></ul>
       </section>
     </main>
 
