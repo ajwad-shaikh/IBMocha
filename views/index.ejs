@@ -175,7 +175,29 @@
        </tr>
     <% } %>
     </table>
-    <% } else if(emails.length == 0 && persons.length == 0) {%>
+    <% } %>
+    <% if(locations.length > 0){ %>
+    <!-- <%=JSON.stringify(persons)%> -->
+    <h2 class="display-4 text-center">Medium Risk Exposure</h2>
+    <table class="table table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Exposed Locations</th>
+        <th scope="col">Relevance</th>
+        <th scope="col">Count</th>
+      </tr>
+    </thead>
+    <% for(var i=0; i < locations.length; i++) { %>
+       <tr class="table-warning">
+         <td><%= i+1 %></td>
+         <td><%= locations[i].text %></td>
+         <td><%= locations[i].relevance %></td>
+         <td><%= locations[i].count %></td>
+       </tr>
+    <% } %>
+    </table>
+    <% } else if(emails.length == 0 && persons.length == 0 && locations.length == 0) {%>
       <h2 class="display-4 text-center"> No Sensitive Exposure Found! :) </h2>
     <% } %>
     <% } %>

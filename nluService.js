@@ -28,13 +28,15 @@ exports.get = (url, features, callback) => {
         persons.sort((a, b) => {return b.relevance - a.relevance})
         let emails = res.entities.filter(ele => ele.type=="EmailAddress" )
         emails.sort((a, b) => {return b.relevance - a.relevance})
+        let locations = res.entities.filter(ele => ele.type=="Location" )
+        locations.sort((a, b) => {return b.relevance - a.relevance})
         // console.log({persons});
         // console.log({emails});
         // console.log('entites',res.entities);
         // console.log('keyword',res.keywords);
 
         if (callback) {
-            callback(persons, emails, err);
+            callback(persons, emails, locations, err);
         }
     });
 }
