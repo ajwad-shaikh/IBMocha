@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>IBMocha | NLP Magic!</title>
-    <meta name="description" content="A cool thing made with IBM NLP services">
+    <title>IBMocha | Private Caffeine</title>
+    <meta name="description" content="Caffeinated Route To Privacy">
     <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,6 +17,7 @@
     <!-- import the webpage's client-side javascript file -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="/client.js" defer></script>
 
@@ -92,7 +93,7 @@
             <h1 class="display-1 mx-auto ibm-header" style="">
                 IBMocha!
                 <span>
-                  Caffeinated route to privacy
+                  Caffeinated Route To Privacy
                 </span>
             </h1>
           </div>
@@ -149,10 +150,9 @@
       </div>
     </div>
 
-
     <% if(data){ %>
-    <p>You pressed submit button</p>
-    <h2 class="center">Critical Exposure</h2>
+    <% if(emails.length > 0){ %>
+    <h2 class="display-4 text-center">Critical Exposure</h2>
     <!-- <%=JSON.stringify(emails)%> -->
     <table class="table table-striped">
     <thead class="thead-dark">
@@ -178,8 +178,10 @@
        </div> 
     <% } %>
     </table>
+    <% } %>
+    <% if(persons.length > 0){ %>
     <!-- <%=JSON.stringify(persons)%> -->
-    <h2 class="center">High Risk Exposure</h2>
+    <h2 class="display-4 text-center">High Risk Exposure</h2>
     <table class="table table-striped">
     <thead class="thead-dark">
       <tr>
@@ -204,8 +206,10 @@
        </div>
     <% } %>
     </table>
+    <% } else if(emails.length == 0 && persons.length == 0) {%>
+      <h2 class="display-4 text-center"> No Sensitive Exposure Found! :) </h2>
     <% } %>
-
+    <% } %>
 
     <script src="/classie.js"></script>
     <script>
@@ -253,4 +257,13 @@
            });
        </script>
   </body>
+  <footer class="row header-row p-0 m-0">
+    <!-- Copyright -->
+    <div class="mx-auto ibm-header">
+      <h4 class="display-6"> Made with <i class="fas fa-heart"></i> on <a href="https://github.com/ajwad-shaikh/IBMocha"><i class="fab fa-github"> </i></a> at IBM Hackathon - Abhikalpan 2k19 </h4>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
 </html>
