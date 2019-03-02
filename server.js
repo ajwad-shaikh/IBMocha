@@ -6,12 +6,11 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static('public'));
-app.set('view engine', 'ejs')
-
+app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
 	res.render('index', { data: false });
-})
+});
 
 app.post('/', (req, res) => {
 	let reqUrl = req.body.url;
@@ -21,9 +20,9 @@ app.post('/', (req, res) => {
 		if (err) {
 			res.render('index', { data: true});
 		}
-		res.render('index', { data: true, emails: emails, persons:persons  });
+		res.render('index', { data: true, url:reqUrl, text:reqText, emails: emails, persons:persons  });
 	});
-})
+});
 
 let listener = app.listen(8008, () => {
 	console.log('Your app is listening on http://localhost:' + listener.address().port);
