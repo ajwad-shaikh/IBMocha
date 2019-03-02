@@ -9,14 +9,16 @@ const nlu = new NLU({
 });
 
 
-exports.run = function(url,features,callback){
+exports.get = function(url,features,callback){
     let parameters = {
-        'url': 'www.ibm.com',
+        'url': url,
         'features': {
-            'categories': {
-                'limit': 3
-            }
-        }
+            'sentiment':{},
+            'categories':{},
+            'concepts':{},
+            'keywords':{},
+            'entities':{}
+        },
     };
     
     nlu.analyze(parameters,(err, res)=>{
@@ -24,7 +26,9 @@ exports.run = function(url,features,callback){
             console.error(err);
             return;
         }
-        console.log(res);
+        if(callback){
+            callback(res);
+        }
     });
 }
 
