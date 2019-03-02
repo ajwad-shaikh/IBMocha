@@ -13,10 +13,10 @@ exports.get = (url, features, callback) => {
     let parameters = {
         'url': url,
         'features': {
-            'sentiment': {},
-            'categories': {},
-            'concepts': {},
-            'keywords': {},
+            // 'sentiment': {},
+            // 'categories': {},
+            // 'concepts': {},
+            // 'keywords': {},
             'entities': {},
         },
     };
@@ -27,9 +27,9 @@ exports.get = (url, features, callback) => {
         let persons = res.entities.filter(ele => ele.type=="Person");
         persons.sort((a, b) => {return b.relevance - a.relevance})
         let emails = res.entities.filter(ele => ele.type=="EmailAddress" )
-        emails.sort((a, b) => {return b.relevance - a.relevance})        
-        // console.log({persons});    
-        // console.log({emails});    
+        emails.sort((a, b) => {return b.relevance - a.relevance})
+        // console.log({persons});
+        // console.log({emails});
         // console.log('entites',res.entities);
         // console.log('keyword',res.keywords);
 
@@ -38,5 +38,3 @@ exports.get = (url, features, callback) => {
         }
     });
 }
-
-
