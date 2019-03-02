@@ -1,34 +1,22 @@
-const rp = require('request-promise');
-const $ = require('cheerio');
+// server.js
+// where your node app starts
 
-const url = 'https://engineering.careers360.com/colleges/list-of-engineering-colleges-in-India?page=';
-//https://engineering.careers360.com/colleges/list-of-engineering-colleges-in-India?page=1
-var c = 0;
+// init project
+var express = require('express');
+var app = express();
 
-var func = function(i){
-	if(i<213){
-		let url_ = url + i;
-		rp(url_)
-		.then((html)=>{
-			console.log('Page : ' + i);
-			console.log('url : ' + url_)
-			
-			$('.new-searchcollegeListing',html).each( (i_,li) => {
-				console.log('>>> ' + c)
-				console.log($('.title',li).text())
-				console.log($('.clg-state',li).text())
-				c++;
-			})
-			func(i+1)
-		})
-		.catch((err) => {
-        	func(i)
-    	});
+// we've started you off with Express, 
+// but feel free to use whatever libs or frameworks you'd like through `package.json`.
 
-	}
-}
+// http://expressjs.com/en/starter/static-files.html
+app.use(express.static('public'));
 
-func(0)
+// http://expressjs.com/en/starter/basic-routing.html
+app.get('/', function(request, response) {
+  response.sendFile(__dirname + '/views/index.html');
+});
 
-//class apachesolr_search-features
-//new-searchcollegeListing search-result sponsored has_review
+// listen for requests :)
+var listener = app.listen(process.env.PORT, function() {
+  console.log('Your app is listening on port http://localhost:' + listener.address().port);
+});
