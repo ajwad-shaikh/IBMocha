@@ -13,14 +13,15 @@ app.get('/', (req, res) => {
 });
 
 app.post('/', (req, res) => {
-	let reqUrl = req.body.url;
-	let reqText = req.body.text;
-
-	nlu.get(reqUrl || reqText, {}, (persons, emails, err) => {
+	let req_url = req.body.url;
+	nlu.get(req_url, {}, (persons, emails, locations, err) => {
+		console.log(persons);
+		console.log(emails);
+		console.log(locations);
 		if (err) {
 			res.render('index', { data: true});
 		}
-		res.render('index', { data: true, url:reqUrl, text:reqText, emails: emails, persons:persons  });
+		res.render('index', { data: true, emails: emails, persons:persons, locations: locations});
 	});
 });
 

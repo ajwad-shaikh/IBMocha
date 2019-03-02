@@ -11,7 +11,7 @@ const nlu = new NLU({
 
 exports.get = (str, features, callback) => {
     let parameters = {
-        
+
         'features': {
             // 'sentiment': {},
             // 'categories': {},
@@ -33,29 +33,32 @@ exports.get = (str, features, callback) => {
         if (err) {
             console.error(err);
             callback([],[], err);
-            return;            
+            return;
         }
         let persons = res.entities.filter(ele => ele.type=="Person");
         persons.sort((a, b) => {return b.relevance - a.relevance})
         let emails = res.entities.filter(ele => ele.type=="EmailAddress" )
-        emails.sort((a, b) => {return b.relevance - a.relevance})        
-        console.log({persons});    
-        console.log({emails});    
+        emails.sort((a, b) => {return b.relevance - a.relevance})
+        let locations = res.entities.filter(ele => ele.type=="Location" )
+        locations.sort((a, b) => {return b.relevance - a.relevance})
+        // console.log({persons});
+        // console.log({emails});
+        // console.log('entites',res.entities);
+        // console.log('keyword',res.keywords);
 
         if (callback) {
-            callback(persons, emails, err);
+            callback(persons, emails, locations, err);
         }
     });
 }
 
 
 function validURL(str) {
-    var pattern = new RegExp('^(https?:\\/\\/)?'+ 
-      '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ 
-      '((\\d{1,3}\\.){3}\\d{1,3}))'+ 
+    var pattern = new RegExp('^(https?:\\/\\/)?'+
+      '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+
+      '((\\d{1,3}\\.){3}\\d{1,3}))'+
       '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+
       '(\\?[;&a-z\\d%_.~+=-]*)?'+
       '(\\#[-a-z\\d_]*)?$','i');
     return !!pattern.test(str);
   }
-
