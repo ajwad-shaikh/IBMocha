@@ -1,289 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>IBMocha | Contains Caffeine</title>
-    <meta name="description" content="Caffeinated Solution To Privacy">
-    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- import the webpage's stylesheet -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" type="text/css" href=" /set1.css" />
+<head>
+	<title>IBMocha | Contains Caffeine</title>
+	<meta name="description" content="Caffeinated Solution To Privacy">
+	<link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- import the webpage's client-side javascript file -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<!-- import the webpage's stylesheet -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="/style.css">
+	<link rel="stylesheet" type="text/css" href=" /set1.css" />
 
-    <script src="/client.js" defer></script>
+	<!-- import the webpage's client-side javascript file -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+		integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
 
-    <style>
-      body {
-        margin: 0px;
-        font-family: 'Raleway', Arial, sans-serif;
-        background-color:#d0d1d0;
-      }
-      .header-row{
-        background-color:#2f3238;
-      }
-      .ibm-header{
-        font-style: normal;
-        font-weight: 800;
-        color:#d0d1d0;
-        font-size: 8em;
-        line-height: 1;
-        margin: 0.25em 0 0;
-        letter-spacing: -1px;text-align: center;
-      }
-      .ibm-header span{
-        display: block;
-        font-size: 30%;
-        font-weight: 400;
-        padding: 0.325em 0 1em 0;
-        color: #6c6c6c;
-      }
-      .button-submit{
-        margin-top: 56px;
-        background-color: transparent; /* Green */
-        border: none;
-        height: 74px;
-        border-top: 3px solid #2f3238;
-        border-bottom: 3px solid #2f3238;
-        border-radius: 0px;
-        color: #2f3238;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-weight:700;
-	      font-size:calc(70.25*1.5)%;
-      }
+	<script src="/client.js" defer></script>
 
-      .progress {
-        height: 35px;
-      }
-      .progress .skill {
-        line-height: 35px;
-        padding: 0;
-        margin: 0 0 0 20px;
-        text-transform: uppercase;
-      }
-      .progress .skill .val {
-        float: right;
-        font-style: normal;
-        margin: 0 20px 0 0;
-      }
-      .progress-bar {
-        text-align: left;
-        transition-duration: 3s;
-      }
-    </style>
+	<style>
+		body {
+			margin: 0px;
+			font-family: 'Raleway', Arial, sans-serif;
+			background-color: #d0d1d0;
+		}
 
-  </head>
-  <body>
+		.header-row {
+			background-color: #2f3238;
+		}
 
-    <div class="row header-row p-0 m-0">
-      <div class="container w-100">
-        <div class="row pt-4 pb-4">
-          <div class="col-lg-8 mx-auto">
-            <h1 class="display-1 mx-auto ibm-header" style="">
-                IBMocha!
-                <span>
-                  A Caffeinated Solution To Privacy
-                </span>
-            </h1>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row p-0 m-0">
-      <div class="container w-100">
-        <div class="row pt-4 pb-4">
-          <div class="col-lg-12 mx-auto text-center">
+		.ibm-header {
+			font-style: normal;
+			font-weight: 800;
+			color: #d0d1d0;
+			font-size: 8em;
+			line-height: 1;
+			margin: 0.25em 0 0;
+			letter-spacing: -1px;
+			text-align: center;
+		}
 
-            <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
-              <li class="nav-item">
-                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">URL</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Text</a>
-              </li>
-            </ul>
-            
+		.ibm-header span {
+			display: block;
+			font-size: 30%;
+			font-weight: 400;
+			padding: 0.325em 0 1em 0;
+			color: #6c6c6c;
+		}
 
-            <div class="tab-content" id="myTabContent">
+		.button-submit {
+			margin-top: 56px;
+			background-color: transparent;
+			/* Green */
+			border: none;
+			height: 74px;
+			border-top: 3px solid #2f3238;
+			border-bottom: 3px solid #2f3238;
+			border-radius: 0px;
+			color: #2f3238;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-weight: 700;
+			font-size: calc(70.25*1.5)%;
+		}
 
-              <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                <form action="/" method="post">
-                <div class="row">
-                  <div class="col-9 pr-0">
-                    <span class="input input--shoko mr-0" style="font-size:1.5em">
-                      <input name="url" type="text" class="ghost-input input__field input__field--shoko" id="input-4" required/>
-                      <label class="input__label input__label--shoko" for="input-4">
-                        <span class="input__label-content input__label-content--shoko">Enter URL here</span>
-                      </label>
-                      <svg class="graphic graphic--shoko" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
-                        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
-                        <path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"/>
-                      </svg>
-                    </span>
-                  </div>
-                  <div class="col-3 pl-0 ml-0">
-                    <button type="submit" class="ghost-button button-submit">SUBMIT</button>
-                  </div>
-                </div>
-                </form>
-              </div>
+		.progress {
+			height: 35px;
+		}
+
+		.progress .skill {
+			line-height: 35px;
+			padding: 0;
+			margin: 0 0 0 20px;
+			text-transform: uppercase;
+		}
+
+		.progress .skill .val {
+			float: right;
+			font-style: normal;
+			margin: 0 20px 0 0;
+		}
+
+		.progress-bar {
+			text-align: left;
+			transition-duration: 3s;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<div class="row header-row p-0 m-0">
+		<div class="container w-100">
+			<div class="row pt-4 pb-4">
+				<div class="col-lg-8 mx-auto">
+					<h1 class="display-1 mx-auto ibm-header" style="">
+						IBMocha!
+						<span>
+							A Caffeinated Solution To Privacy
+						</span>
+					</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row p-0 m-0">
+		<div class="container w-100">
+			<div class="row pt-4 pb-4">
+				<div class="col-lg-12 mx-auto text-center">
+
+					<ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+								aria-controls="home" aria-selected="true">URL</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+								aria-controls="profile" aria-selected="false">Text</a>
+						</li>
+					</ul>
 
 
-              <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                <form action="/" method="post">
-                <div class="row">
-                  <div class="col-9 pr-0">
-                    <span class="input input--shoko mr-0" style="font-size:1.5em">
-                      <input name="text" type="text" class="ghost-input input__field input__field--shoko" id="input-4" required/>
-                      <label class="input__label input__label--shoko" for="input-4">
-                        <span class="input__label-content input__label-content--shoko">Enter Text here</span>
-                      </label>
-                      <svg class="graphic graphic--shoko" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
-                        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
-                        <path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"/>
-                      </svg>
-                    </span>
-                  </div>
-                  <div class="col-3 pl-0 ml-0">
-                    <button type="submit" class="ghost-button button-submit">SUBMIT</button>
-                  </div>
-                </div>
-                </form>
-              </div>
+					<div class="tab-content" id="myTabContent">
+
+						<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+							<form action="/" method="post">
+								<div class="row">
+									<div class="col-9 pr-0">
+										<span class="input input--shoko mr-0" style="font-size:1.5em">
+											<input name="url" type="text"
+												class="ghost-input input__field input__field--shoko" id="input-4"
+												required />
+											<label class="input__label input__label--shoko" for="input-4">
+												<span class="input__label-content input__label-content--shoko">Enter URL
+													here</span>
+											</label>
+											<svg class="graphic graphic--shoko" width="300%" height="100%"
+												viewBox="0 0 1200 60" preserveAspectRatio="none">
+												<path
+													d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0" />
+												<path
+													d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0" />
+											</svg>
+										</span>
+									</div>
+									<div class="col-3 pl-0 ml-0">
+										<button type="submit" class="ghost-button button-submit">SUBMIT</button>
+									</div>
+								</div>
+							</form>
+						</div>
 
 
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+						<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+							<form action="/" method="post">
+								<div class="row">
+									<div class="col-9 pr-0">
+										<span class="input input--shoko mr-0" style="font-size:1.5em">
+											<input name="text" type="text"
+												class="ghost-input input__field input__field--shoko" id="input-4"
+												required />
+											<label class="input__label input__label--shoko" for="input-4">
+												<span class="input__label-content input__label-content--shoko">Enter
+													Text here</span>
+											</label>
+											<svg class="graphic graphic--shoko" width="300%" height="100%"
+												viewBox="0 0 1200 60" preserveAspectRatio="none">
+												<path
+													d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0" />
+												<path
+													d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0" />
+											</svg>
+										</span>
+									</div>
+									<div class="col-3 pl-0 ml-0">
+										<button type="submit" class="ghost-button button-submit">SUBMIT</button>
+									</div>
+								</div>
+							</form>
+						</div>
 
-    <% if(data){ %>
-    <% if(emails.length > 0){ %>
-    <h2 class="display-4 text-center">Critical Exposure</h2>
-    <!-- <%=JSON.stringify(emails)%> -->
-    <table class="table table-striped">
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Exposed Email Address</th>
-        <th scope="col">Relevance</th>
-        <th scope="col">Count</th>
-      </tr>
-    </thead>
-    <% for(var i=0; i < emails.length; i++) { %>
-      <!--
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<% if(data){ %>
+	<% if(emails.length > 0){ %>
+	<h2 class="display-4 text-center">Critical Exposure</h2>
+	<!-- <%=JSON.stringify(emails)%> -->
+	<table class="table table-striped">
+		<thead class="thead-dark">
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">Exposed Email Address</th>
+				<th scope="col">Relevance</th>
+				<th scope="col">Count</th>
+			</tr>
+		</thead>
+		<% for(var i=0; i < emails.length; i++) { %>
+		<!--
        <tr class="table-danger">
          <td><%= i+1 %></td>
          <td><%= emails[i].text %></td>
          <td><%= emails[i].relevance %></td>
          <td><%= emails[i].count %></td>
        </tr>-->
-       <div class="progress skill-bar ">
-           <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= 100*(emails[i].relevance) %>" aria-valuemin="0" aria-valuemax="100">
-               <span class="skill"><%= emails[i].text %> (Count: <%= emails[i].count %>)<i class="val"><%= emails[i].relevance*100 %>%</i></span>
-           </div>
-       </div> 
-    <% } %>
-    </table>
-    <% } %>
-    <% if(persons.length > 0){ %>
-    <!-- <%=JSON.stringify(persons)%> -->
-    <h2 class="display-4 text-center">High Risk Exposure</h2>
-    <table class="table table-striped">
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Exposed Person Name</th>
-        <th scope="col">Relevance</th>
-        <th scope="col">Count</th>
-      </tr>
-    </thead>
-    <% for(var i=0; i < persons.length; i++) { %>
-      <!--
+		<div class="progress skill-bar ">
+			<div class="progress-bar progress-bar-success" role="progressbar"
+				aria-valuenow="<%= 100*(emails[i].relevance) %>" aria-valuemin="0" aria-valuemax="100">
+				<span class="skill"><%= emails[i].text %> (Count: <%= emails[i].count %>)<i
+						class="val"><%= emails[i].relevance*100 %>%</i></span>
+			</div>
+		</div>
+		<% } %>
+	</table>
+	<% } %>
+	<% if(persons.length > 0){ %>
+	<!-- <%=JSON.stringify(persons)%> -->
+	<h2 class="display-4 text-center">High Risk Exposure</h2>
+	<table class="table table-striped">
+		<thead class="thead-dark">
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">Exposed Person Name</th>
+				<th scope="col">Relevance</th>
+				<th scope="col">Count</th>
+			</tr>
+		</thead>
+		<% for(var i=0; i < persons.length; i++) { %>
+		<!--
        <tr class="table-warning">
          <td><%= i+1 %></td>
          <td><%= persons[i].text %></td>
          <td><%= persons[i].relevance %></td>
          <td><%= persons[i].count %></td>
        </tr>-->
-       <div class="progress skill-bar "> 
-           <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= 100*(persons[i].relevance) %>" aria-valuemin="0" aria-valuemax="100">
-               <span class="skill"><%= persons[i].text %> (Count: <%= persons[i].count %>)<i class="val"><%= persons[i].relevance*100 %>%</i></span>
-           </div>
-       </div>
-    <% } %>
-    </table>
-    <% } else if(emails.length == 0 && persons.length == 0) {%>
-      <h2 class="display-4 text-center"> No Sensitive Exposure Found! :) </h2>
-    <% } %>
-    <% } %>
+		<div class="progress skill-bar ">
+			<div class="progress-bar progress-bar-success" role="progressbar"
+				aria-valuenow="<%= 100*(persons[i].relevance) %>" aria-valuemin="0" aria-valuemax="100">
+				<span class="skill"><%= persons[i].text %> (Count: <%= persons[i].count %>)<i
+						class="val"><%= persons[i].relevance*100 %>%</i></span>
+			</div>
+		</div>
+		<% } %>
+	</table>
+	<% } else if(emails.length == 0 && persons.length == 0) {%>
+	<h2 class="display-4 text-center"> No Sensitive Exposure Found! :) </h2>
+	<% } %>
+	<% } %>
+	<div id="preview" style="width: 100%; height: 350px"></div>
+	<script src="/classie.js"></script>
+	<script>
+		(function () {
+			// trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+			if (!String.prototype.trim) {
+				(function () {
+					// Make sure we trim BOM and NBSP
+					var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+					String.prototype.trim = function () {
+						return this.replace(rtrim, '');
+					};
+				})();
+			}
 
-    <script src="/classie.js"></script>
-    <script>
-        (function() {
-          // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
-          if (!String.prototype.trim) {
-            (function() {
-              // Make sure we trim BOM and NBSP
-              var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
-              String.prototype.trim = function() {
-                return this.replace(rtrim, '');
-              };
-            })();
-          }
+			[].slice.call(document.querySelectorAll('input.input__field')).forEach(function (inputEl) {
+				// in case the input is already filled..
+				if (inputEl.value.trim() !== '') {
+					classie.add(inputEl.parentNode, 'input--filled');
+				}
 
-          [].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
-            // in case the input is already filled..
-            if( inputEl.value.trim() !== '' ) {
-              classie.add( inputEl.parentNode, 'input--filled' );
-            }
+				// events:
+				inputEl.addEventListener('focus', onInputFocus);
+				inputEl.addEventListener('blur', onInputBlur);
+			});
 
-            // events:
-            inputEl.addEventListener( 'focus', onInputFocus );
-            inputEl.addEventListener( 'blur', onInputBlur );
-          } );
+			function onInputFocus(ev) {
+				classie.add(ev.target.parentNode, 'input--filled');
+			}
 
-          function onInputFocus( ev ) {
-            classie.add( ev.target.parentNode, 'input--filled' );
-          }
+			function onInputBlur(ev) {
+				if (ev.target.value.trim() === '') {
+					classie.remove(ev.target.parentNode, 'input--filled');
+				}
+			}
+		})();
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('.progress .progress-bar').css("width",
+				function () {
+					return $(this).attr("aria-valuenow") + "%";
+				}
+			)
+		});
+	</script>
+	<script>
+		let text = "<%= text %>";
+		let url = "<%= url %>";
 
-          function onInputBlur( ev ) {
-            if( ev.target.value.trim() === '' ) {
-              classie.remove( ev.target.parentNode, 'input--filled' );
-            }
-          }
-        })();
-      </script>
-      <script type="text/javascript">
-        $(document).ready(function() {
-             $('.progress .progress-bar').css("width",
-                       function() {
-                           return $(this).attr("aria-valuenow") + "%";
-                       }
-               )
-           });
-       </script>
-  </body>
-  <footer class="row header-row p-0 m-0 w-100">
-    <!-- Copyright -->
-    <div class="mx-auto ibm-header">
-      <h4 class="display-6"> Made with <i class="fas fa-heart"></i> on <a href="https://github.com/ajwad-shaikh/IBMocha"><i class="fab fa-github"> </i></a> at IBM Hackathon - Abhikalpan 2k19 </h4>
-    </div>
-    <!-- Copyright -->
+		iframe = document.createElement('iframe');
+		iframe.id = 'prv-iframe'
+		iframe.style.width = "95%";
+		iframe.style.height = "600px";
+		if (url) {
+			console.log(url);
+			// iframe.src = url;
+		}
+		else {
+			console.log(text);
+			iframe.body = text
+		}
+		$('#preview').append(iframe);
+		console.log($('prv-iframe'));
+		$(document).ready(() => {
+			console.log('ready');
+			//$("#prv-frame").attr("src", url);
+			let window = iframe.contentWindow
+			window.location = url;
+			
+		});
+				/*$('prv-iframe').load(function () {
+			alert('the iframe is done loading');
+		});*/
+	</script>
+</body>
+<footer class="row header-row p-0 m-0 w-100">
+	<!-- Copyright -->
+	<div class="mx-auto ibm-header">
+		<h4 class="display-6"> Made with <i class="fas fa-heart"></i> on <a
+				href="https://github.com/ajwad-shaikh/IBMocha"><i class="fab fa-github"> </i></a> at IBM Hackathon -
+			Abhikalpan 2k19 </h4>
+	</div>
+	<!-- Copyright -->
 
-  </footer>
-  <!-- Footer -->
+</footer>
+<!-- Footer -->
+
 </html>
