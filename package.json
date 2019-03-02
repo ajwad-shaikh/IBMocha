@@ -7,12 +7,14 @@
   "description": "A simple Node app built on Express, instantly up and running.",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "serve": "./node_modules/nodemon/bin/nodemon.js server.js"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
+    "nodemon": "^1.18.10",
     "request": "^2.88.0",
     "request-promise": "^4.2.2",
     "watson-developer-cloud": "^3.18.1"
