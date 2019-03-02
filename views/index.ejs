@@ -1,216 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>IBMocha | NLP Magic!</title>
-    <meta name="description" content="A cool thing made with IBM NLP services">
-    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- import the webpage's stylesheet -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/style.css">
-		<link rel="stylesheet" type="text/css" href=" /set1.css" />
+<head>
+	<title>IBMocha | NLP Magic!</title>
+	<meta name="description" content="A cool thing made with IBM NLP services">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- import the webpage's client-side javascript file -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="/client.js" defer></script>
+	<!-- import the webpage's stylesheet -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="/style.css">
+	<link rel="stylesheet" type="text/css" href=" /set1.css" />
 
-    <style>
-      body {
-        margin: 0px;
-        font-family: 'Raleway', Arial, sans-serif;
-        background-color:#d0d1d0;
-      }
-      .header-row{
-        background-color:#2f3238;
-      }
-      .ibm-header{
-        font-style: normal;
-        font-weight: 800;
-        color:#d0d1d0;
-        font-size: 8em;
-        line-height: 1;
-        margin: 0.25em 0 0;
-        letter-spacing: -1px;text-align: center;
-      }
-      .ibm-header span{
-        display: block;
-        font-size: 30%;
-        font-weight: 400;
-        padding: 0.325em 0 1em 0;
-        color: #6c6c6c;
-      }
-      .button-submit{
-        margin-top: 56px;
-        background-color: transparent; /* Green */
-        border: none;
-        height: 74px;
-        border-top: 3px solid #2f3238;
-        border-bottom: 3px solid #2f3238;
-        border-radius: 0px;
-        color: #2f3238;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-weight:700;
-	      font-size:calc(70.25*1.5)%;
-      }
-    </style>
+	<!-- import the webpage's client-side javascript file -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+	<script src="/client.js" defer></script>
 
-  </head>
-  <body>
+	<style>
+		body {
+			margin: 0px;
+			font-family: 'Raleway', Arial, sans-serif;
+			background-color: #d0d1d0;
+		}
 
-    <div class="row header-row p-0 m-0">
-      <div class="container w-100">
-        <div class="row pt-4 pb-4">
-          <div class="col-lg-8 mx-auto">
-            <h1 class="display-1 mx-auto ibm-header" style="">
-                IBMocha!
-                <span>
-                  Caffeinated route to privacy
-                </span>
-            </h1>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row p-0 m-0">
-      <div class="container w-100">
-        <div class="row pt-4 pb-4">
-          <div class="col-lg-12 mx-auto text-center">
+		.header-row {
+			background-color: #2f3238;
+		}
 
-            <form action="/" method="post">
-            <div class="row">
-              <div class="col-9 pr-0">
-                <span class="input input--shoko mr-0" style="font-size:1.5em">
-                  <input name="url" type="text" class="ghost-input input__field input__field--shoko" id="input-4" required/>
-                  <label class="input__label input__label--shoko" for="input-4">
-                    <span class="input__label-content input__label-content--shoko">Enter URL here</span>
-                  </label>
-                  <svg class="graphic graphic--shoko" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
-                    <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
-                    <path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"/>
-                  </svg>
-                </span>
-              </div>
-              <div class="col-3 pl-0 ml-0">
-                <button type="submit" class="ghost-button button-submit">SUBMIT</button>
-              </div>
-            </div>
-            </form>
+		.ibm-header {
+			font-style: normal;
+			font-weight: 800;
+			color: #d0d1d0;
+			font-size: 8em;
+			line-height: 1;
+			margin: 0.25em 0 0;
+			letter-spacing: -1px;
+			text-align: center;
+		}
 
-            <form action="/" method="post">
-            <div class="row">
-              <div class="col-9 pr-0">
-                <span class="input input--shoko mr-0" style="font-size:1.5em">
-                  <input name="text" type="text" class="ghost-input input__field input__field--shoko" id="input-4" required/>
-                  <label class="input__label input__label--shoko" for="input-4">
-                    <span class="input__label-content input__label-content--shoko">Enter Text here</span>
-                  </label>
-                  <svg class="graphic graphic--shoko" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
-                    <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
-                    <path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"/>
-                  </svg>
-                </span>
-              </div>
-              <div class="col-3 pl-0 ml-0">
-                <button type="submit" class="ghost-button button-submit">SUBMIT</button>
-              </div>
-            </div>
-            </form>
+		.ibm-header span {
+			display: block;
+			font-size: 30%;
+			font-weight: 400;
+			padding: 0.325em 0 1em 0;
+			color: #6c6c6c;
+		}
 
-          </div>
-        </div>
-      </div>
-    </div>
+		.button-submit {
+			margin-top: 56px;
+			background-color: transparent;
+			/* Green */
+			border: none;
+			height: 74px;
+			border-top: 3px solid #2f3238;
+			border-bottom: 3px solid #2f3238;
+			border-radius: 0px;
+			color: #2f3238;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-weight: 700;
+			font-size: calc(70.25*1.5)%;
+		}
+	</style>
 
+</head>
 
-    <% if(data){ %>
-    <p>You pressed submit button</p>
-    <h2 class="center">Critical Exposure</h2>
-    <!-- <%=JSON.stringify(emails)%> -->
-    <table class="table table-striped">
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Exposed Email Address</th>
-        <th scope="col">Relevance</th>
-        <th scope="col">Count</th>
-      </tr>
-    </thead>
-    <% for(var i=0; i < emails.length; i++) { %>
-       <tr class="table-danger">
-         <td><%= i+1 %></td>
-         <td><%= emails[i].text %></td>
-         <td><%= emails[i].relevance %></td>
-         <td><%= emails[i].count %></td>
-       </tr>
-    <% } %>
-    </table>
-    <!-- <%=JSON.stringify(persons)%> -->
-    <h2 class="center">High Risk Exposure</h2>
-    <table class="table table-striped">
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Exposed Person Name</th>
-        <th scope="col">Relevance</th>
-        <th scope="col">Count</th>
-      </tr>
-    </thead>
-    <% for(var i=0; i < persons.length; i++) { %>
-       <tr class="table-warning">
-         <td><%= i+1 %></td>
-         <td><%= persons[i].text %></td>
-         <td><%= persons[i].relevance %></td>
-         <td><%= persons[i].count %></td>
-       </tr>
-    <% } %>
-    </table>
-    <% } %>
+<body>
+
+	<div class="row header-row p-0 m-0">
+		<div class="container w-100">
+			<div class="row pt-4 pb-4">
+				<div class="col-lg-8 mx-auto">
+					<h1 class="display-1 mx-auto ibm-header" style="">
+						IBMocha!
+						<span>
+							Caffeinated route to privacy
+						</span>
+					</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row p-0 m-0">
+		<div class="container w-100">
+			<div class="row pt-4 pb-4">
+				<div class="col-lg-12 mx-auto text-center">
+
+					<form action="/" method="post">
+						<div class="row">
+							<div class="col-9 pr-0">
+								<span class="input input--shoko mr-0" style="font-size:1.5em">
+									<input name="url" type="text" class="ghost-input input__field input__field--shoko"
+										id="input-4" required />
+									<label class="input__label input__label--shoko" for="input-4">
+										<span class="input__label-content input__label-content--shoko">Enter URL
+											here</span>
+									</label>
+									<svg class="graphic graphic--shoko" width="300%" height="100%" viewBox="0 0 1200 60"
+										preserveAspectRatio="none">
+										<path
+											d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0" />
+										<path
+											d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0" />
+									</svg>
+								</span>
+							</div>
+							<div class="col-3 pl-0 ml-0">
+								<button type="submit" class="ghost-button button-submit">SUBMIT</button>
+							</div>
+						</div>
+					</form>
+
+					<form action="/" method="post">
+						<div class="row">
+							<div class="col-9 pr-0">
+								<span class="input input--shoko mr-0" style="font-size:1.5em">
+									<input name="text" type="text" class="ghost-input input__field input__field--shoko"
+										id="input-4" required />
+									<label class="input__label input__label--shoko" for="input-4">
+										<span class="input__label-content input__label-content--shoko">Enter Text
+											here</span>
+									</label>
+									<svg class="graphic graphic--shoko" width="300%" height="100%" viewBox="0 0 1200 60"
+										preserveAspectRatio="none">
+										<path
+											d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0" />
+										<path
+											d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0" />
+									</svg>
+								</span>
+							</div>
+							<div class="col-3 pl-0 ml-0">
+								<button type="submit" class="ghost-button button-submit">SUBMIT</button>
+							</div>
+						</div>
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</div>
 
 
-    <script src="/classie.js"></script>
-    <script>
-        (function() {
-          // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
-          if (!String.prototype.trim) {
-            (function() {
-              // Make sure we trim BOM and NBSP
-              var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
-              String.prototype.trim = function() {
-                return this.replace(rtrim, '');
-              };
-            })();
-          }
+	<% if(data){ %>
+	<p>You pressed submit button</p>
+	<h2 class="center">Critical Exposure</h2>
+	<!-- <%=JSON.stringify(emails)%> -->
+	<table class="table table-striped">
+		<thead class="thead-dark">
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">Exposed Email Address</th>
+				<th scope="col">Relevance</th>
+				<th scope="col">Count</th>
+			</tr>
+		</thead>
+		<% for(var i=0; i < emails.length; i++) { %>
+		<tr class="table-danger">
+			<td><%= i+1 %></td>
+			<td><%= emails[i].text %></td>
+			<td><%= emails[i].relevance %></td>
+			<td><%= emails[i].count %></td>
+		</tr>
+		<% } %>
+	</table>
+	<!-- <%=JSON.stringify(persons)%> -->
+	<h2 class="center">High Risk Exposure</h2>
+	<table class="table table-striped">
+		<thead class="thead-dark">
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">Exposed Person Name</th>
+				<th scope="col">Relevance</th>
+				<th scope="col">Count</th>
+			</tr>
+		</thead>
+		<% for(var i=0; i < persons.length; i++) { %>
+		<tr class="table-warning">
+			<td><%= i+1 %></td>
+			<td><%= persons[i].text %></td>
+			<td><%= persons[i].relevance %></td>
+			<td><%= persons[i].count %></td>
+		</tr>
+		<% } %>
+	</table>
+	<% } %>
 
-          [].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
-            // in case the input is already filled..
-            if( inputEl.value.trim() !== '' ) {
-              classie.add( inputEl.parentNode, 'input--filled' );
-            }
 
-            // events:
-            inputEl.addEventListener( 'focus', onInputFocus );
-            inputEl.addEventListener( 'blur', onInputBlur );
-          } );
+	<script src="/classie.js"></script>
+	<script>
+		(function () {
+			// trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+			if (!String.prototype.trim) {
+				(function () {
+					// Make sure we trim BOM and NBSP
+					var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+					String.prototype.trim = function () {
+						return this.replace(rtrim, '');
+					};
+				})();
+			}
 
-          function onInputFocus( ev ) {
-            classie.add( ev.target.parentNode, 'input--filled' );
-          }
+			[].slice.call(document.querySelectorAll('input.input__field')).forEach(function (inputEl) {
+				// in case the input is already filled..
+				if (inputEl.value.trim() !== '') {
+					classie.add(inputEl.parentNode, 'input--filled');
+				}
 
-          function onInputBlur( ev ) {
-            if( ev.target.value.trim() === '' ) {
-              classie.remove( ev.target.parentNode, 'input--filled' );
-            }
-          }
-        })();
-      </script>
-  </body>
+				// events:
+				inputEl.addEventListener('focus', onInputFocus);
+				inputEl.addEventListener('blur', onInputBlur);
+			});
+
+			function onInputFocus(ev) {
+				classie.add(ev.target.parentNode, 'input--filled');
+			}
+
+			function onInputBlur(ev) {
+				if (ev.target.value.trim() === '') {
+					classie.remove(ev.target.parentNode, 'input--filled');
+				}
+			}
+		})();
+	</script>
+</body>
+
 </html>

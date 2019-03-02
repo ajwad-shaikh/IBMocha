@@ -18,8 +18,6 @@ app.post('/', (req, res) => {
 	let reqText = req.body.text;
 
 	nlu.get(reqUrl || reqText, {}, (persons, emails, err) => {
-		console.log(persons);
-		console.log(emails);
 		if (err) {
 			res.render('index', { data: true});
 		}

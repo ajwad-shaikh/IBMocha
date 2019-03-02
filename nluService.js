@@ -13,10 +13,10 @@ exports.get = (str, features, callback) => {
     let parameters = {
         
         'features': {
-            'sentiment': {},
-            'categories': {},
-            'concepts': {},
-            'keywords': {},
+            // 'sentiment': {},
+            // 'categories': {},
+            // 'concepts': {},
+            // 'keywords': {},
             'entities': {},
         },
     };
@@ -41,8 +41,6 @@ exports.get = (str, features, callback) => {
         emails.sort((a, b) => {return b.relevance - a.relevance})        
         console.log({persons});    
         console.log({emails});    
-        // console.log('entites',res.entities);
-        // console.log('keyword',res.keywords);
 
         if (callback) {
             callback(persons, emails, err);
