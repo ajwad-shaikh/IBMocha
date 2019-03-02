@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- import the webpage's stylesheet -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/style.css">
 		<link rel="stylesheet" type="text/css" href=" /set1.css" />
@@ -62,7 +62,7 @@
 	      font-size:calc(70.25*1.5)%;
       }
     </style>
-    
+
   </head>
   <body>
 
@@ -114,8 +114,26 @@
     <% if(data){ %>
     <p>You pressed submit button</p>
     <h1>Res</h1>
-    <%= emails %>
-    <%= persons %>
+    <!-- <%=JSON.stringify(emails)%> -->
+    <table>
+    <% for(var i=0; i < emails.length; i++) { %>
+       <tr>
+         <td><%= emails[i].text %></td>
+         <td><%= emails[i].relevance %></td>
+         <td><%= emails[i].count %></td>
+       </tr>
+    <% } %>
+    </table>
+    <!-- <%=JSON.stringify(persons)%> -->
+    <table>
+    <% for(var i=0; i < persons.length; i++) { %>
+       <tr>
+         <td><%= persons[i].text %></td>
+         <td><%= persons[i].relevance %></td>
+         <td><%= persons[i].count %></td>
+       </tr>
+    <% } %>
+    </table>
     <% } %>
 
 
@@ -132,22 +150,22 @@
               };
             })();
           }
-  
+
           [].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
             // in case the input is already filled..
             if( inputEl.value.trim() !== '' ) {
               classie.add( inputEl.parentNode, 'input--filled' );
             }
-  
+
             // events:
             inputEl.addEventListener( 'focus', onInputFocus );
             inputEl.addEventListener( 'blur', onInputBlur );
           } );
-  
+
           function onInputFocus( ev ) {
             classie.add( ev.target.parentNode, 'input--filled' );
           }
-  
+
           function onInputBlur( ev ) {
             if( ev.target.value.trim() === '' ) {
               classie.remove( ev.target.parentNode, 'input--filled' );
