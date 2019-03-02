@@ -227,28 +227,30 @@
          <td><%= emails[i].relevance %></td>
          <td><%= emails[i].count %></td>
        </tr>-->
-       <div class="progress skill-bar ">
-           <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= 100*(emails[i].relevance) %>" aria-valuemin="0" aria-valuemax="100">
-               <span class="skill"><%= emails[i].text %> (Count: <%= emails[i].count %>)<i class="val"><%= emails[i].relevance*100 %>%</i></span>
-           </div>
-       </div> 
-    <% } %>
-    </table>
-    <% } %>
-    <% if(persons.length > 0){ %>
-    <!-- <%=JSON.stringify(persons)%> -->
-    <h2 class="display-4 text-center">High Risk Exposure</h2>
-    <table class="table table-striped">
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Exposed Person Name</th>
-        <th scope="col">Relevance</th>
-        <th scope="col">Count</th>
-      </tr>
-    </thead>
-    <% for(var i=0; i < persons.length; i++) { %>
-      <!--
+		<div class="progress skill-bar ">
+			<div class="progress-bar progress-bar-success" role="progressbar"
+				aria-valuenow="<%= 100*(emails[i].relevance) %>" aria-valuemin="0" aria-valuemax="100">
+				<span class="skill"><%= emails[i].text %> (Count: <%= emails[i].count %>)<i
+						class="val"><%= emails[i].relevance*100 %>%</i></span>
+			</div>
+		</div>
+		<% } %>
+	</table>
+	<% } %>
+	<% if(persons.length > 0){ %>
+	<!-- <%=JSON.stringify(persons)%> -->
+	<h2 class="display-4 text-center">High Risk Exposure</h2>
+	<table class="table table-striped">
+		<thead class="thead-dark">
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">Exposed Person Name</th>
+				<th scope="col">Relevance</th>
+				<th scope="col">Count</th>
+			</tr>
+		</thead>
+		<% for(var i=0; i < persons.length; i++) { %>
+		<!--
        <tr class="table-warning">
          <td><%= i+1 %></td>
          <td><%= persons[i].text %></td>
