@@ -659,7 +659,7 @@
             aadharTable.appendChild(thead);
 
             for (var i = 0; i < aadhaar.length; i++) {
-              if (aadhaar[i].indexOf(' ') >= 0) {
+              if (aadhaar[i].indexOf(' ') == 5) {
                 var tstr = aadhaar[i];
                 let row = document.createElement('div');
                 row.classList.add('progress', 'skill-bar', 'm-2');
