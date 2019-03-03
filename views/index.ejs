@@ -1,54 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>IBMocha | Contains Caffeine</title>
-    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- import the webpage's stylesheet -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" type="text/css" href=" /set1.css" />
+<head>
+  <title>IBMocha | Contains Caffeine</title>
+  <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- import the webpage's client-side javascript file -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- import the webpage's stylesheet -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" type="text/css" href=" /set1.css" />
 
-    <script src="/client.js" defer></script>
+  <!-- import the webpage's client-side javascript file -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 
-    <style>
-      body {
+  <script src="/client.js" defer></script>
+
+  <style>
+    body {
+      margin: 0px;
+      font-family: 'Raleway', Arial, sans-serif;
+      background-color: #d0d1d0;
+    }
+
+    .header-row {
+      background-color: #2f353f;
+    }
+
+    .ibm-header {
+      font-style: normal;
+      font-weight: 800;
+      color: #d0d1d0;
+      font-size: 8em;
+      line-height: 1;
+      margin: 0.25em 0 0;
+      letter-spacing: -1px;
+      text-align: center;
+    }
+
+    .ibm-header span {
+      display: block;
+      font-size: 30%;
+      font-weight: 400;
+      padding: 0.325em 0 1em 0;
+      color: #6c6c6c;
+    }
+
+    .button-submit {
+      margin-top: 56px;
+      background-color: transparent;
+      /* Green */
+      border: none;
+      height: 74px;
+      border-top: 3px solid #2f353f;
+      border-bottom: 3px solid #2f353f;
+      border-radius: 0px;
+      color: #2f353f;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-weight: 700;
+      font-size: calc(70.25*1.5)%;
+    }
+
+    .progress {
+      height: 35px;
+    }
+
+    .progress .skill {
+      line-height: 35px;
+      padding: 0;
+      margin: 0 0 0 20px;
+      text-transform: uppercase;
+    }
+
+    .progress .skill .val {
+      float: right;
+      font-style: normal;
+      margin: 0 20px 0 0;
+    }
+
+    .progress-bar {
+      text-align: left;
+      transition-duration: 3s;
+    }
+
+    .nav-item {
+      background-color: transparent;
+      border: 0px;
+      border-radius: 0px;
+      font-weight: 700;
+      font-size: calc(70.25*1.5)%;
+      font-family: 'Raleway', Arial, sans-serif;
+    }
+
+    .nav-tabs {
+      border-radius: 0px;
+      border: 0px;
+    }
+
+    .nav-item :hover {
+      border-radius: 0px;
+      border: 0px;
+    }
+
+    .nav-tabs .nav-link {
+      background-color: transparent;
+      color: #d0d1d0;
+      border: 0px;
+      border-top-left-radius: 0rem;
+      border-top-right-radius: 0rem;
+      outline: none;
+      padding: 20px;
+    }
+
+    .nav-tabs .nav-link.active {
+      background-color: #d0d1d0;
+      color: #2f353f;
+      border: 0px;
+      border-top-left-radius: 0rem;
+      border-top-right-radius: 0rem;
+    }
+
+    .skill {
+      font-size: 1rem;
+      font-weight: 1000;
+      text-transform: none !important;
+    }
+
+    .progress-bar {
+      background-color: #2f353f;
+    }
+
+    .progress {
+      background-color: #6c6c6c;
+    }
+
+    #preview {
+
+      <head><title>IBMocha | Contains Caffeine</title><link id="favicon"rel="icon"href="https://glitch.com/edit/favicon-app.ico"type="image/x-icon"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible"content="IE=edge"><meta name="viewport"content="width=device-width, initial-scale=1">< !-- import the webpage's stylesheet -->
+<link href="https://fonts.googleapis.com/css?family=Raleway"rel="stylesheet"><link rel="stylesheet"href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"crossorigin="anonymous"><link rel="stylesheet"href="/style.css"><link rel="stylesheet"type="text/css"href=" /set1.css"/>< !-- import the webpage's client-side javascript file -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script><link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"crossorigin="anonymous"><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+
+      crossorigin="anonymous"></script><script src="/client.js"defer></script><style>body {
         margin: 0px;
         font-family: 'Raleway', Arial, sans-serif;
-        background-color:#d0d1d0;
+        background-color: #d0d1d0;
       }
-      .header-row{
-        background-color:#2f3238;
+
+      .header-row {
+        background-color: #2f3238;
       }
-      .ibm-header{
+
+      .ibm-header {
         font-style: normal;
         font-weight: 800;
-        color:#d0d1d0;
+        color: #d0d1d0;
         font-size: 8em;
         line-height: 1;
         margin: 0.25em 0 0;
-        letter-spacing: -1px;text-align: center;
+        letter-spacing: -1px;
+        text-align: center;
       }
-      .ibm-header span{
+
+      .ibm-header span {
         display: block;
         font-size: 30%;
         font-weight: 400;
         padding: 0.325em 0 1em 0;
         color: #6c6c6c;
       }
-      .button-submit{
+
+      .button-submit {
         margin-top: 56px;
-        background-color: transparent; /* Green */
+        background-color: transparent;
+        /* Green */
         border: none;
         height: 74px;
         border-top: 3px solid #2f3238;
@@ -59,194 +207,231 @@
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        font-weight:700;
-	      font-size:calc(70.25*1.5)%;
+        font-weight: 700;
+        font-size: calc(70.25*1.5)%;
       }
 
       .progress {
         height: 35px;
       }
+
       .progress .skill {
         line-height: 35px;
         padding: 0;
         margin: 0 0 0 20px;
         text-transform: uppercase;
       }
+
       .progress .skill .val {
         float: right;
         font-style: normal;
         margin: 0 20px 0 0;
       }
+
       .progress-bar {
         text-align: left;
         transition-duration: 3s;
       }
+
       .nav-item {
-        background-color:#2f3238;
+        background-color: transparent;
         border: 0px;
         border-radius: 0px;
-        font-weight:700;
-	      font-size:calc(70.25*1.5)%;
+        font-weight: 700;
+        font-size: calc(70.25*1.5)%;
         font-family: 'Raleway', Arial, sans-serif;
       }
+
       .nav-tabs {
         border-radius: 0px;
         border: 0px;
       }
+
       .nav-item :hover {
         border-radius: 0px;
         border: 0px;
       }
+
       .nav-tabs .nav-link {
-        background-color:#2f3238;
+        background-color: transparent;
         color: #d0d1d0;
         border: 0px;
         border-top-left-radius: 0rem;
         border-top-right-radius: 0rem;
-        outline:none;
+        outline: none;
         padding: 20px;
       }
+
       .nav-tabs .nav-link.active {
-        background-color:#d0d1d0;
+        background-color: #d0d1d0;
         color: #2f3238;
         border: 0px;
         border-top-left-radius: 0rem;
         border-top-right-radius: 0rem;
       }
-      .skill{
+
+      .skill {
         font-size: 1rem;
-        font-weight:1000;
+        font-weight: 1000;
         text-transform: none !important;
       }
+
       .progress-bar {
         background-color: #2f3238;
       }
+
       .progress {
         background-color: #6c6c6c;
       }
-      #preview {
 
-      }
-    </style>
+      #preview {}
+  </style>
 
-  </head>
-  <body>
+</head>
 
-    <div class="row header-row p-0 m-0">
-      <div class="container w-100">
-        <div class="row pt-4 pb-4">
-          <div class="col-lg-8 mx-auto">
-            <h1 class="display-1 mx-auto ibm-header" style="">
-              <i class="fas fa-mug-hot"></i>
-                IBMocha!
-                <span>
-                  A Caffeinated Solution To Privacy
-                </span>
-            </h1>
+<body>
+
+  <div class="row header-row p-0 m-0">
+    <div class="container w-100">
+      <div class="row pt-4 pb-4">
+        <div class="col-lg-8 mx-auto">
+          <h1 class="display-1 mx-auto ibm-header" style="">
+            <i class="fas fa-mug-hot"></i>
+            IBMocha!
+            <span>
+              A Caffeinated Solution To Privacy
+            </span>
+          </h1>
+        </div>
+      </div>
+
+      <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+        <li class="nav-item m-0">
+          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+            aria-selected="true">URL</a>
+        </li>
+        <li class="nav-item m-0">
+          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+            aria-selected="false">Text</a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+
+  <div class="row p-0 m-0">
+    <div class="container w-100">
+      <div class="row pt-4 pb-4">
+        <div class="col-lg-12 mx-auto text-center">
+          <div class="tab-content" id="myTabContent">
+
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+              <form action="/" method="post">
+                <div class="row">
+                  <div class="col-9 pr-0">
+                    <span class="input input--shoko mr-0" style="font-size:1.5em">
+                      <input name="url" type="text" class="ghost-input input__field input__field--shoko" id="input-4"
+                        required />
+                      <label class="input__label input__label--shoko" for="input-4">
+                        <span class="input__label-content input__label-content--shoko">Enter URL here</span>
+                      </label>
+                      <svg class="graphic graphic--shoko" width="300%" height="100%" viewBox="0 0 1200 60"
+                        preserveAspectRatio="none">
+                        <path
+                          d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0" />
+                        <path
+                          d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0" />
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="col-3 pl-0 ml-0">
+                    <button type="submit" class="ghost-button button-submit">SUBMIT</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+              <form action="/" method="post">
+                <div class="row">
+                  <div class="col-9 pr-0">
+                    <span class="input input--shoko mr-0" style="font-size:1.5em">
+                      <input name="text" type="text" class="ghost-input input__field input__field--shoko" id="input-4"
+                        required />
+                      <label class="input__label input__label--shoko" for="input-4">
+                        <span class="input__label-content input__label-content--shoko">Enter Text here</span>
+                      </label>
+                      <svg class="graphic graphic--shoko" width="300%" height="100%" viewBox="0 0 1200 60"
+                        preserveAspectRatio="none">
+                        <path
+                          d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0" />
+                        <path
+                          d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0" />
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="col-3 pl-0 ml-0">
+                    <button type="submit" class="ghost-button button-submit">SUBMIT</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+
           </div>
         </div>
       </div>
     </div>
-    <div class="row p-0 m-0" style="background-color:#2f3238;">
-      <div class="container w-100">
+  </div>
 
-        <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
-          <li class="nav-item m-0">
-            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">URL</a>
-          </li>
-          <li class="nav-item m-0">
-            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Text</a>
-          </li>
-        </ul>
-
-      </div>
-    </div>
-
-
-    <div class="row p-0 m-0">
+    <div class="row header-row p-0 mb-4 m-0">
       <div class="container w-100">
         <div class="row pt-4 pb-4">
-          <div class="col-lg-12 mx-auto text-center">
-            <div class="tab-content" id="myTabContent">
-
-              <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                <form action="/" method="post">
-                <div class="row">
-                  <div class="col-9 pr-0">
-                    <span class="input input--shoko mr-0" style="font-size:1.5em">
-                      <input name="url" type="text" class="ghost-input input__field input__field--shoko" id="input-4" required/>
-                      <label class="input__label input__label--shoko" for="input-4">
-                        <span class="input__label-content input__label-content--shoko">Enter URL here</span>
-                      </label>
-                      <svg class="graphic graphic--shoko" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
-                        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
-                        <path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"/>
-                      </svg>
-                    </span>
-                  </div>
-                  <div class="col-3 pl-0 ml-0">
-                    <button type="submit" class="ghost-button button-submit">SUBMIT</button>
-                  </div>
-                </div>
-                </form>
-              </div>
-
-
-              <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                <form action="/" method="post">
-                <div class="row">
-                  <div class="col-9 pr-0">
-                    <span class="input input--shoko mr-0" style="font-size:1.5em">
-                      <input name="text" type="text" class="ghost-input input__field input__field--shoko" id="input-4" required/>
-                      <label class="input__label input__label--shoko" for="input-4">
-                        <span class="input__label-content input__label-content--shoko">Enter Text here</span>
-                      </label>
-                      <svg class="graphic graphic--shoko" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
-                        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
-                        <path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"/>
-                      </svg>
-                    </span>
-                  </div>
-                  <div class="col-3 pl-0 ml-0">
-                    <button type="submit" class="ghost-button button-submit">SUBMIT</button>
-                  </div>
-                </div>
-                </form>
-              </div>
-
-
-            </div>
+          <div class="col-lg-8 mx-auto">
+            <p class="w-100 mx-auto p-0 m-0" style="color: #d0d1d0;">
+              In the race to big data solutions and data-driven analytics, it is important to preserve the privacy of
+              the information source as data propagates into the loops of the Internet.
+            </p><br>
+            <h5 class="w-100 mx-auto p-0 m-0" style="color: #d0d1d0;">
+              IBMocha is a hack on IBM Watson NLU tools to utilize the power of Machine Learning Cloud Infrastructure to
+              redact sensitive information on the Internet.
+            </h5><br>
+            <h5 class="w-100 mx-auto p-0 m-0" style="color: #d0d1d0;font-weight:700;">
+              If you are a web-admin, you can use this code to look for potential exposure of private data on your
+              pages. This can help you screen your website for possible <b>GDPR Violations</b>.
+            </h5>
           </div>
         </div>
       </div>
     </div>
 
     <% if(data){ %>
+    <div id="crit" class="container w-100" style="padding-top: 50px;padding-bottom: 50px">
       <% if(emails.length > 0){ %>
-        <div class="container w-100" style="padding-top: 100px">
-          <h2 class="display-4 text-center">Critical Exposure</h2>
-          <!-- <%=JSON.stringify(emails)%> -->
-          <table class="table table-striped">
-            <thead class="thead-dark">
-              <tr>
-                <th scope="col">Exposed Email Address</th>
-                <th scope="col">Relevance</th>
-              </tr>
-            </thead>
-          </table>
-          <% for(var i=0; i < emails.length; i++) { %>
+      <h2 class="display-4 text-center">Critical Exposure</h2>
+      <!-- <%=JSON.stringify(emails)%> -->
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Exposed Email Address</th>
+            <th scope="col">Relevance</th>
+          </tr>
+        </thead>
+      </table>
+      <% for(var i=0; i < emails.length; i++) { %>
 
-            <div class="progress skill-bar m-2" style="background-color: rgb(203, 168, 168); ">
-              <div class="progress-bar progress-bar-success" role="progressbar"
-                aria-valuenow="<%= (emails[i].relevance) %>" aria-valuemin="0" aria-valuemax="100"
-                style="background-color: #cd0100 ">
-                <span class="skill"><%= emails[i].text %> - <%=emails[i].relevance%>%
-                  <!--(Count: <%= emails[i].count %>)-->
-                </span>
-                  <!--<i class="val"><%= emails[i].relevance*100 %>%</i>-->
-              </div>
-            </div>
-          <% } %>
+      <div class="progress skill-bar m-2" style="background-color: rgb(203, 168, 168); ">
+        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= (emails[i].relevance) %>"
+          aria-valuemin="0" aria-valuemax="100" style="background-color: #cd0100 ">
+          <span class="skill"><%= emails[i].text %> - <%=emails[i].relevance%>%
+            <!--(Count: <%= emails[i].count %>)-->
+          </span>
+          <!--<i class="val"><%= emails[i].relevance*100 %>%</i>-->
+        </div>
+      </div>
+      <% } %>
       <% } %>
       <div id="aadhar-table">
       </div>
@@ -257,34 +442,33 @@
     <% if(persons.length > 0){ %>
     <!-- <%=JSON.stringify(persons)%> -->
 
-      <div class="container w-100 " style="padding-top: 100px">
-        <h2 class="display-4 text-center">High Risk Exposure</h2>
-        <table class="table table-striped">
-          <thead class="thead-dark">
-            <tr>
-              <th scope="col">Exposed Person Name</th>
-              <th scope="col">Relevance</th>
-            </tr>
-          </thead>
-        </table>
-        <% for(var i=0; i < persons.length; i++) { %>
-          <div class="progress skill-bar m-2" style="background-color: rgb(213, 212, 140); ">
-              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= (persons[i].relevance) %>"
-                aria-valuemin="0" aria-valuemax="100"
-                style="background-color: #ff9901  ">
-                  <span class="skill"><%= persons[i].text %> - <%= persons[i].relevance %>%
-                    <!--<i class="val"><%= persons[i].relevance*100 %>%</i>-->
-                  </span>
-              </div>
-          </div>
-        <% } %>
-
+    <div class="container w-100 " style="padding-top: 50px;padding-bottom: 50px">
+      <h2 class="display-4 text-center">High Risk Exposure</h2>
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Exposed Person Name</th>
+            <th scope="col">Relevance</th>
+          </tr>
+        </thead>
+      </table>
+      <% for(var i=0; i < persons.length; i++) { %>
+      <div class="progress skill-bar m-2" style="background-color: rgb(213, 212, 140); ">
+        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= (persons[i].relevance) %>"
+          aria-valuemin="0" aria-valuemax="100" style="background-color: #ff9901  ">
+          <span class="skill"><%= persons[i].text %> - <%= persons[i].relevance %>%
+            <!--<i class="val"><%= persons[i].relevance*100 %>%</i>-->
+          </span>
+        </div>
       </div>
+      <% } %>
+
+    </div>
     <% } %>
     <% if(locations.length > 0){ %>
     <!-- <%=JSON.stringify(persons)%> -->
 
-    <div class="container w-100 " style="padding-top: 100px">
+    <div class="container w-100 " style="padding-top: 50px;padding-bottom: 50px">
       <h2 class="display-4 text-center">Medium Risk Exposure</h2>
       <table class="table table-striped">
         <thead class="thead-dark">
@@ -295,223 +479,252 @@
         </thead>
       </table>
       <% for(var i=0; i < locations.length; i++) { %>
-        <div class="progress skill-bar m-2" style="background-color: rgb(144, 200, 204); ">
-            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= (locations[i].relevance) %>"
-              aria-valuemin="0" aria-valuemax="100"
-              style="background-color: #0166cc ">
-                <span class="skill"><%= locations[i].text %> - <%= locations[i].relevance %>%
-                  <!--<i class="val"><%= locations[i].relevance*100 %>%</i>-->
-                </span>
-            </div>
+      <div class="progress skill-bar m-2" style="background-color: rgb(144, 200, 204); ">
+        <div class="progress-bar progress-bar-success" role="progressbar"
+          aria-valuenow="<%= (locations[i].relevance) %>" aria-valuemin="0" aria-valuemax="100"
+          style="background-color: #0166cc ">
+          <span class="skill"><%= locations[i].text %> - <%= locations[i].relevance %>%
+            <!--<i class="val"><%= locations[i].relevance*100 %>%</i>-->
+          </span>
         </div>
+      </div>
       <% } %>
     </div>
 
     <% } else if(emails.length == 0 && persons.length == 0 && locations.length == 0) {%>
-        <h2 class="display-4 text-center"> No Sensitive Exposure Found! :) </h2>
+    <h2 class="display-4 text-center"> No Sensitive Exposure Found! :) </h2>
     <% } %>
     <center>
-      <h2 class="display-4 text-center" style="margin-top: 100px;">Output Preview (Experimental for URLs)</h2>
+      <% if(text) { %>
+      <h2 class="display-4 text-center" style="margin-top: 100px;">Output Preview</h2>
       <div id="preview" style="margin-bottom:50px;width: 100%; height: 550px">
       </div>
+      <% } %>
     </center>
-  <% } %>
+    <% } %>
+
+    <% if(data){ %>
+    <script>
+      window.onload = function () {
+        document.getElementById('crit').scrollIntoView();
+      };
+    </script>
+    <% } %>
 
     <script src="/classie.js"></script>
     <script>
-        (function() {
-          // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
-          if (!String.prototype.trim) {
-            (function() {
-              // Make sure we trim BOM and NBSP
-              var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
-              String.prototype.trim = function() {
-                return this.replace(rtrim, '');
-              };
-            })();
+      (function () {
+        // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+        if (!String.prototype.trim) {
+          (function () {
+            // Make sure we trim BOM and NBSP
+            var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+            String.prototype.trim = function () {
+              return this.replace(rtrim, '');
+            };
+          })();
+        }
+
+        [].slice.call(document.querySelectorAll('input.input__field')).forEach(function (inputEl) {
+          // in case the input is already filled..
+          if (inputEl.value.trim() !== '') {
+            classie.add(inputEl.parentNode, 'input--filled');
           }
 
-          [].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
-            // in case the input is already filled..
-            if( inputEl.value.trim() !== '' ) {
-              classie.add( inputEl.parentNode, 'input--filled' );
+          // events:
+          inputEl.addEventListener('focus', onInputFocus);
+          inputEl.addEventListener('blur', onInputBlur);
+        });
+
+        function onInputFocus(ev) {
+          classie.add(ev.target.parentNode, 'input--filled');
+        }
+
+        function onInputBlur(ev) {
+          if (ev.target.value.trim() === '') {
+            classie.remove(ev.target.parentNode, 'input--filled');
+          }
+        }
+      })();
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('.progress .progress-bar').css("width",
+          function () {
+            return $(this).attr("aria-valuenow") + "%";
+          }
+        )
+      });
+    </script>
+    <script>
+			   <% if (data) { %>
+        let text = "<%= text %>";
+        let url = "<%= url %>";
+        let emails = [];
+      <% if (emails.length > 0) { %>
+          emails = <%- JSON.stringify(emails) %>;
+      <% } %>
+
+        let persons =[];
+      <% if (persons.length > 0) { %>
+          persons = <%- JSON.stringify(persons) %>;
+      <% } %>
+
+          let locations =[];
+      <% if (locations.length > 0) { %>
+          locations = <%- JSON.stringify(locations) %>;
+
+      <% } %>
+
+          iframe = document.createElement('iframe');
+        iframe.id = 'prv-iframe'
+        iframe.style.width = "80%";
+        iframe.style.height = "500px";
+
+
+        $('#preview').append(iframe);
+        let iframeWindow = iframe.contentWindow;
+        console.log($('prv-iframe'));
+
+        $(document).ready(() => {
+          console.log('ready');
+          //$("#prv-frame").attr("src", url);
+          if (text) {
+            console.log(iframeWindow.document.body);
+            iframeWindow.document.body.innerHTML = text;
+            // let body = window.document.getElementsbyTagName('body')[0];
+            $('prv-iframe').on('load', () => {
+              console.log('iframe is completely loaded');
+            })
+            var str = iframeWindow.document.body.innerHTML;
+            var s = str.replace(/[^\d]/g, ' ');
+            s = s.replace(/\s{2,}/g, ' ');
+            let numbers = s.split(' ');
+            numbers = numbers.filter(a => a.length > 0);
+
+
+            let mobileTable = document.createElement('table');
+            mobileTable.classList.add('table', 'table-striped');
+
+            let mthead = document.createElement('thead');
+            mthead.classList.add('thead-dark');
+            let mrow = document.createElement('tr');
+            let mth = document.createElement('th');
+            mth.innerText = 'Mobile no Information';
+            mrow.appendChild(mth);
+            mthead.appendChild(mrow);
+
+            mobileTable.appendChild(mthead);
+
+            for (var i = 0; i < numbers.length; i++) {
+              if (numbers[i].length != 10)
+                continue;
+              var tstr = numbers[i];
+              let row = document.createElement('div');
+              row.classList.add('progress', 'skill-bar', 'm-2');
+              let td = document.createElement('span');
+              td.innerText = numbers[i];
+              row.style.background = "#cd0100";
+              td.style.color = "#fff";
+              td.classList.add("skill");
+              row.appendChild(td);
+              mobileTable.appendChild(row);
+              var trep = '<span style="background:red">**Redacted Mobile Number**</span>'
+              let reg = new RegExp(tstr, 'ig');
+              console.log(reg);
+              str = str.replace(reg, trep);
+            }
+            if (numbers.length > 0) {
+              document.getElementById('mobile-table').appendChild(mobileTable);
             }
 
-            // events:
-            inputEl.addEventListener( 'focus', onInputFocus );
-            inputEl.addEventListener( 'blur', onInputBlur );
-          } );
+            var p = str.replace(/[^\d]/g, ' ');
+            console.log(p);
+            p = p.replace(/\s{3,}/g, '-');
+            console.log(p);
+            let aadhaar = p.split('-');
+            aadhaar = aadhaar.filter(a => a.length > 0);
+            console.log(aadhaar);
 
-          function onInputFocus( ev ) {
-            classie.add( ev.target.parentNode, 'input--filled' );
-          }
+            let aadharTable = document.createElement('table');
+            aadharTable.classList.add('table', 'table-striped');
 
-          function onInputBlur( ev ) {
-            if( ev.target.value.trim() === '' ) {
-              classie.remove( ev.target.parentNode, 'input--filled' );
+            let thead = document.createElement('thead');
+            thead.classList.add('thead-dark');
+            let row = document.createElement('tr');
+            let th = document.createElement('th');
+            th.innerText = 'Aadhaar Information';
+            row.appendChild(th);
+            thead.appendChild(row);
+            aadharTable.appendChild(thead);
+
+            for (var i = 0; i < aadhaar.length; i++) {
+              if (aadhaar[i].indexOf(' ') >= 0) {
+                var tstr = aadhaar[i];
+                let row = document.createElement('div');
+                row.classList.add('progress', 'skill-bar', 'm-2');
+                let td = document.createElement('span');
+                td.innerText = aadhaar[i];
+                row.style.background = "#cd0100";
+                td.style.color = "#fff";
+                td.classList.add("skill");
+                row.appendChild(td);
+                aadharTable.appendChild(row);
+                var trep = '<span style="background:red">{Redacted Aadhaar Number}</span>'
+                let reg = new RegExp(tstr, 'ig');
+                console.log(reg);
+                str = str.replace(reg, trep);
+              }
             }
+
+            if (aadhaar.length > 0) {
+              console.log({ aadhaar })
+              document.getElementById('aadhar-table').appendChild(aadharTable);
+            }
+
+            for (var i = 0; i < emails.length; i++) {
+              var tstr = emails[i].text;
+              var trep = '<span style="background:red">{Redacted Email Address}</span>'
+              let reg = new RegExp(tstr, 'ig');
+              console.log(reg);
+              str = str.replace(reg, trep);
+            }
+            for (var i = 0; i < persons.length; i++) {
+              var tstr = persons[i].text;
+              var trep = '<span style="background:yellow">{Redacted Name}</span>'
+              let reg = new RegExp(tstr, 'ig');
+              console.log(reg);
+              str = str.replace(reg, trep);
+            }
+            for (var i = 0; i < locations.length; i++) {
+              var tstr = locations[i].text;
+              var trep = '<span style="background:yellow">{Redacted Location}</span>'
+              let reg = new RegExp(tstr, 'ig');
+              console.log(reg);
+              str = str.replace(reg, trep);
+            }
+            iframeWindow.document.body.innerHTML = str;
+            console.log({ str });
           }
-        })();
-      </script>
-      <script type="text/javascript">
-        $(document).ready(function() {
-             $('.progress .progress-bar').css("width",
-                       function() {
-                           return $(this).attr("aria-valuenow") + "%";
-                       }
-               )
-           });
-	   </script>
-	   	<script>
-			   <% if(data){ %>
-				let text = "<%= text %>";
-				let url = "<%= url %>";
-        let emails = <%- JSON.stringify(emails) %>;
-        let persons = <%- JSON.stringify(persons) %>;
-        let locations = <%- JSON.stringify(locations) %>;
+        });
 
-				iframe = document.createElement('iframe');
-				iframe.id = 'prv-iframe'
-				iframe.style.width = "80%";
-				iframe.style.height = "500px";
-				if (url) {
-					console.log(url);
-					// iframe.src = url;
-				}
-				else {
-					console.log(text);
-					// iframe.body = text
-				}
-				$('#preview').append(iframe);
-				let iframeWindow = iframe.contentWindow;
-				console.log($('prv-iframe'));
+      <% } %>
+      /*$('prv-iframe').load(function () {
+    alert('the iframe is done loading');
+});*/
+    </script>
+</body>
+<footer class="row header-row m-0 w-100" style="padding-bottom:30px;padding-top:30px;">
+  <!-- Copyright -->
+  <div class="mx-auto ibm-header mt-0">
+    <h4 class="display-6 m-0" style="letter-spacing: 0.04em;">
+      Made with <i class="fas fa-heart"></i> on <a href="https://github.com/ajwad-shaikh/IBMocha"><i
+          class="fab fa-github"> </i></a> at IBM Hackathon - Abhikalpan 2k19
+    </h4>
+  </div>
+  <!-- Copyright -->
 
-				$(document).ready(() => {
-					console.log('ready');
-					//$("#prv-frame").attr("src", url);
-					if(url){
-						iframeWindow.location = url;
-					}
-					else if(text){
-						console.log(iframeWindow.document.body);
-						iframeWindow.document.body.innerHTML = text;
-						// let body = window.document.getElementsbyTagName('body')[0];
-					}
-          $('prv-iframe').on('load', () => {
-            console.log('iframe is completely loaded');
-          })
-          var str = iframeWindow.document.body.innerHTML;
-          var s = str.replace (/[^\d]/g, ' ');
-          s = s.replace(/\s{2,}/g, ' ');
-          let numbers = s.split(' ');
+</footer>
+<!-- Footer -->
 
-          let mobileTable = document.createElement('table');
-          mobileTable.classList.add('table', 'table-striped');
-
-          let mthead = document.createElement('thead');
-          mthead.classList.add('thead-dark');
-          let mrow = document.createElement('tr');
-          let mth = document.createElement('th');
-          mth.innerText = 'Mobile no Information';
-          mrow.appendChild(mth);
-          mthead.appendChild(mrow);
-          mobileTable.appendChild(mthead);
-
-          for(var i = 0; i < numbers.length; i++) {
-            if(numbers[i].length != 10)
-              continue;
-            var tstr = numbers[i];
-            let row = document.createElement('div');
-            row.classList.add('progress','skill-bar', 'm-2');
-            let td = document.createElement('span');
-            td.innerText = numbers[i];
-            td.classList.add("skill");
-            row.appendChild(td);
-            mobileTable.appendChild(row);
-            var trep = '<span style="background:red">**Redacted Mobile Number**</span>'
-            let reg = new RegExp(tstr,'ig');
-            console.log(reg);
-            str = str.replace(reg,trep);
-          }
-          document.getElementById('mobile-table').appendChild(mobileTable);
-
-          var p = str.replace(/[^\d]/g, ' ');
-          console.log(p);
-          p = p.replace(/\s{3,}/g, '-');
-          console.log(p);
-          let aadhaar = p.split('-');
-          console.log(aadhaar);
-
-          let aadharTable = document.createElement('table');
-          aadharTable.classList.add('table', 'table-striped');
-
-          let thead = document.createElement('thead');
-          thead.classList.add('thead-dark');
-          let row = document.createElement('tr');
-          let th = document.createElement('th');
-          th.innerText = 'Aadhaar Information';
-          row.appendChild(th);
-          thead.appendChild(row);
-          aadharTable.appendChild(thead);
-
-          for(var i = 0; i < aadhaar.length; i++) {
-            if(aadhaar[i].indexOf(' ') == 5){
-            var tstr = aadhaar[i];
-            let row = document.createElement('div');
-            row.classList.add('progress','skill-bar', 'm-2');
-            let td = document.createElement('span');
-            td.innerText = aadhaar[i];
-            td.classList.add("skill");
-            row.appendChild(td);
-            aadharTable.appendChild(row);
-            var trep = '<span style="background:red">{Redacted Aadhaar Number}</span>'
-            let reg = new RegExp(tstr,'ig');
-            console.log(reg);
-            str = str.replace(reg,trep);
-          }
-          }
-          document.getElementById('aadhar-table').appendChild(aadharTable);
-
-          for(var i = 0; i < emails.length; i++) {
-            var tstr = emails[i].text;
-            var trep = '<span style="background:red">{Redacted Email Address}</span>'
-            let reg = new RegExp(tstr,'ig');
-            console.log(reg);
-            str = str.replace(reg,trep);
-          }
-          for(var i = 0; i < persons.length; i++) {
-            var tstr = persons[i].text;
-            var trep = '<span style="background:yellow">{Redacted Name}</span>'
-            let reg = new RegExp(tstr,'ig');
-            console.log(reg);
-            str = str.replace(reg,trep);
-          }
-          for(var i = 0; i < locations.length; i++) {
-            var tstr = locations[i].text;
-            var trep = '<span style="background:yellow">{Redacted Location}</span>'
-            let reg = new RegExp(tstr,'ig');
-            console.log(reg);
-            str = str.replace(reg,trep);
-          }
-          iframeWindow.document.body.innerHTML = str;
-          console.log({str});
-				});
-
-				<% } %>
-						/*$('prv-iframe').load(function () {
-					alert('the iframe is done loading');
-				});*/
-			</script>
-  </body>
-  <footer class="row header-row m-0 w-100" style="padding-bottom:30px;padding-top:30px;">
-    <!-- Copyright -->
-    <div class="mx-auto ibm-header mt-0">
-      <h4 class="display-6 m-0" style="letter-spacing: 0.04em;">
-        Made with <i class="fas fa-heart"></i> on <a href="https://github.com/ajwad-shaikh/IBMocha"><i class="fab fa-github"> </i></a> at IBM Hackathon - Abhikalpan 2k19
-      </h4>
-    </div>
-    <!-- Copyright -->
-
-  </footer>
-  <!-- Footer -->
 </html>
