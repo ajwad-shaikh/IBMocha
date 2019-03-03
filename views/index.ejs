@@ -521,7 +521,7 @@
             row.appendChild(th);
             thead.appendChild(row);
             aadharTable.appendChild(thead);
-            
+
             let count = 1;
             for (var i = 0; i < aadhaar.length; i++) {
               console.log( { aadhaar } );
@@ -535,15 +535,17 @@
                 td.style.color = "#fff";
                 td.classList.add("skill");
                 row.appendChild(td);
-                aadharTable.appendChild(row);
-                var trep = `<span style="background:red">{Redacted Aadhaar Number ${count++}}</span>`
                 let reg = new RegExp(tstr, 'ig');
                 console.log(reg);
-                str = str.replace(reg, trep);
+                if( str.search(reg) > 0){
+                  var trep = `<span style="background:red">{Redacted Aadhaar Number ${count++}}</span>`
+                  str = str.replace(reg, trep);
+                  aadharTable.appendChild(row);
+                }
               }
             }
 
-            if (aadhaar.length > 0) {
+            if (count > 1) {
               console.log({ aadhaar })
               document.getElementById('aadhar-table').appendChild(aadharTable);
             }
