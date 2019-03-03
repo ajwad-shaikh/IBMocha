@@ -521,7 +521,8 @@
             row.appendChild(th);
             thead.appendChild(row);
             aadharTable.appendChild(thead);
-
+            
+            let count = 1;
             for (var i = 0; i < aadhaar.length; i++) {
               console.log( { aadhaar } );
               if (aadhaar[i].indexOf(' ') == 4) {
@@ -535,7 +536,7 @@
                 td.classList.add("skill");
                 row.appendChild(td);
                 aadharTable.appendChild(row);
-                var trep = `<span style="background:red">{Redacted Aadhaar Number ${i+1}}</span>`
+                var trep = `<span style="background:red">{Redacted Aadhaar Number ${count++}}</span>`
                 let reg = new RegExp(tstr, 'ig');
                 console.log(reg);
                 str = str.replace(reg, trep);
