@@ -237,8 +237,8 @@
   
             <div class="progress skill-bar m-2">
               <div class="progress-bar progress-bar-success" role="progressbar"
-                aria-valuenow="<%= 100*(emails[i].relevance) %>" aria-valuemin="0" aria-valuemax="100">
-                <span class="skill"><%= emails[i].text %> - <%=emails[i].relevance*100%>%
+                aria-valuenow="<%= (emails[i].relevance) %>" aria-valuemin="0" aria-valuemax="100">
+                <span class="skill"><%= emails[i].text %> - <%=emails[i].relevance%>%
                   <!--(Count: <%= emails[i].count %>)-->
                 </span>
                   <!--<i class="val"><%= emails[i].relevance*100 %>%</i>-->
@@ -262,9 +262,9 @@
         </table>
         <% for(var i=0; i < persons.length; i++) { %>
           <div class="progress skill-bar m-2">
-              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= 100*(persons[i].relevance) %>" 
+              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= (persons[i].relevance) %>" 
                 aria-valuemin="0" aria-valuemax="100">
-                  <span class="skill"><%= persons[i].text %> - <%= persons[i].relevance*100 %>%
+                  <span class="skill"><%= persons[i].text %> - <%= persons[i].relevance %>%
                     <!--<i class="val"><%= persons[i].relevance*100 %>%</i>-->
                   </span>
               </div>
@@ -287,9 +287,9 @@
       </table>
       <% for(var i=0; i < locations.length; i++) { %>
         <div class="progress skill-bar m-2">
-            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= 100*(locations[i].relevance) %>" 
+            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= (locations[i].relevance) %>" 
               aria-valuemin="0" aria-valuemax="100">
-                <span class="skill"><%= locations[i].text %> - <%= locations[i].relevance*100 %>%
+                <span class="skill"><%= locations[i].text %> - <%= locations[i].relevance %>%
                   <!--<i class="val"><%= locations[i].relevance*100 %>%</i>-->
                 </span>
             </div>

@@ -37,10 +37,20 @@ exports.get = (str, features, callback) => {
         }
         let persons = res.entities.filter(ele => ele.type=="Person");
         persons.sort((a, b) => {return b.relevance - a.relevance})
+        persons.forEach( (p)=> {
+            p.relevance = Math.round(p.relevance*1000)/10;
+            console.log(p.relevance);
+        })
         let emails = res.entities.filter(ele => ele.type=="EmailAddress" )
+        emails.forEach( (p)=> {
+            p.relevance = Math.round(p.relevance*1000)/10;
+        })
         emails.sort((a, b) => {return b.relevance - a.relevance})
         let locations = res.entities.filter(ele => ele.type=="Location" )
         locations.sort((a, b) => {return b.relevance - a.relevance})
+        locations.forEach( (p)=> {
+            p.relevance = Math.round(p.relevance*1000)/10;
+        })
         // console.log({persons});
         // console.log({emails});
         // console.log('entites',res.entities);
