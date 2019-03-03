@@ -234,7 +234,7 @@
       }
 
       .nav-item {
-        background-color: #2f3238;
+        background-color: transparent;
         border: 0px;
         border-radius: 0px;
         font-weight: 700;
@@ -253,7 +253,7 @@
       }
 
       .nav-tabs .nav-link {
-        background-color: #2f3238;
+        background-color: transparent;
         color: #d0d1d0;
         border: 0px;
         border-top-left-radius: 0rem;
@@ -304,10 +304,6 @@
           </h1>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="row p-0 m-0" style="background-color:#2f3238;">
-    <div class="container w-100">
 
       <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
         <li class="nav-item m-0">
@@ -388,6 +384,7 @@
         </div>
       </div>
     </div>
+  </div>
 
     <div class="row header-row p-0 mb-4">
       <div class="container w-100">
@@ -411,7 +408,7 @@
     </div>
 
     <% if(data){ %>
-    <div id="crit" class="container w-100" style="padding-top: 100px">
+    <div id="crit" class="container w-100" style="padding-top: 50px;padding-bottom: 50px">
       <% if(emails.length > 0){ %>
       <h2 class="display-4 text-center">Critical Exposure</h2>
       <!-- <%=JSON.stringify(emails)%> -->
@@ -445,7 +442,7 @@
     <% if(persons.length > 0){ %>
     <!-- <%=JSON.stringify(persons)%> -->
 
-    <div class="container w-100 " style="padding-top: 100px">
+    <div class="container w-100 " style="padding-top: 50px;padding-bottom: 50px">
       <h2 class="display-4 text-center">High Risk Exposure</h2>
       <table class="table table-striped">
         <thead class="thead-dark">
@@ -471,7 +468,7 @@
     <% if(locations.length > 0){ %>
     <!-- <%=JSON.stringify(persons)%> -->
 
-    <div class="container w-100 " style="padding-top: 100px">
+    <div class="container w-100 " style="padding-top: 50px;padding-bottom: 50px">
       <h2 class="display-4 text-center">Medium Risk Exposure</h2>
       <table class="table table-striped">
         <thead class="thead-dark">
