@@ -426,19 +426,20 @@
 			   <% if (data) { %>
         let text = "<%= text %>";
         let url = "<%= url %>";
-        emails = [];
+        let emails = [];
       <% if (emails.length > 0) { %>
-          let emails = <%- JSON.stringify(emails) %>;
+          emails = <%- JSON.stringify(emails) %>;
       <% } %>
 
-          persons =[];      
+        let persons =[];
       <% if (persons.length > 0) { %>
-          let persons = <%- JSON.stringify(persons) %>;
+          persons = <%- JSON.stringify(persons) %>;
       <% } %>
 
-          locations =[];
+          let locations =[];
       <% if (locations.length > 0) { %>
-          let locations = <%- JSON.stringify(locations) %>;
+          locations = <%- JSON.stringify(locations) %>;
+
       <% } %>
 
           iframe = document.createElement('iframe');
@@ -524,7 +525,7 @@
             aadharTable.appendChild(thead);
 
             for (var i = 0; i < aadhaar.length; i++) {
-              if (aadhaar[i].indexOf(' ') >= 0) {
+              if (aadhaar[i].indexOf(' ') == 5) {
                 var tstr = aadhaar[i];
                 let row = document.createElement('div');
                 row.classList.add('progress', 'skill-bar', 'm-2');
@@ -572,7 +573,7 @@
             console.log({ str });
           }
         });
-      
+
       <% } %>
       /*$('prv-iframe').load(function () {
     alert('the iframe is done loading');
