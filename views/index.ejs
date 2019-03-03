@@ -125,7 +125,7 @@
         background-color: #6c6c6c;
       }
       #preview {
-        
+
       }
     </style>
 
@@ -137,6 +137,7 @@
         <div class="row pt-4 pb-4">
           <div class="col-lg-8 mx-auto">
             <h1 class="display-1 mx-auto ibm-header" style="">
+              <i class="fas fa-mug-hot"></i>
                 IBMocha!
                 <span>
                   A Caffeinated Solution To Privacy
@@ -234,7 +235,7 @@
             </thead>
           </table>
           <% for(var i=0; i < emails.length; i++) { %>
-  
+
             <div class="progress skill-bar m-2">
               <div class="progress-bar progress-bar-success" role="progressbar"
                 aria-valuenow="<%= 100*(emails[i].relevance) %>" aria-valuemin="0" aria-valuemax="100">
@@ -245,11 +246,16 @@
               </div>
             </div>
           <% } %>
-        </div>
       <% } %>
+      <div id="aadhar-table">
+      </div>
+
+      <div id="mobile-table">
+      </div>
+    </div>
     <% if(persons.length > 0){ %>
     <!-- <%=JSON.stringify(persons)%> -->
-    
+
       <div class="container w-100 " style="padding-top: 100px">
         <h2 class="display-4 text-center">High Risk Exposure</h2>
         <table class="table table-striped">
@@ -262,7 +268,7 @@
         </table>
         <% for(var i=0; i < persons.length; i++) { %>
           <div class="progress skill-bar m-2">
-              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= 100*(persons[i].relevance) %>" 
+              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= 100*(persons[i].relevance) %>"
                 aria-valuemin="0" aria-valuemax="100">
                   <span class="skill"><%= persons[i].text %> - <%= persons[i].relevance*100 %>%
                     <!--<i class="val"><%= persons[i].relevance*100 %>%</i>-->
@@ -270,24 +276,25 @@
               </div>
           </div>
         <% } %>
+
       </div>
     <% } %>
     <% if(locations.length > 0){ %>
     <!-- <%=JSON.stringify(persons)%> -->
-  
+
     <div class="container w-100 " style="padding-top: 100px">
       <h2 class="display-4 text-center">Medium Risk Exposure</h2>
       <table class="table table-striped">
         <thead class="thead-dark">
           <tr>
-            <th scope="col">Exposed Person Name</th>
+            <th scope="col">Exposed Locations' Name</th>
             <th scope="col">Relevance</th>
           </tr>
         </thead>
       </table>
       <% for(var i=0; i < locations.length; i++) { %>
         <div class="progress skill-bar m-2">
-            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= 100*(locations[i].relevance) %>" 
+            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= 100*(locations[i].relevance) %>"
               aria-valuemin="0" aria-valuemax="100">
                 <span class="skill"><%= locations[i].text %> - <%= locations[i].relevance*100 %>%
                   <!--<i class="val"><%= locations[i].relevance*100 %>%</i>-->
@@ -296,12 +303,12 @@
         </div>
       <% } %>
     </div>
-  
+
     <% } else if(emails.length == 0 && persons.length == 0 && locations.length == 0) {%>
         <h2 class="display-4 text-center"> No Sensitive Exposure Found! :) </h2>
     <% } %>
-    <center> 
-      <h2 class="display-4 text-center" style="margin-top: 100px;">Website Preview</h2>
+    <center>
+      <h2 class="display-4 text-center" style="margin-top: 100px;">Output Preview (Experimental for URLs)</h2>
       <div id="preview" style="margin-bottom:50px;width: 100%; height: 550px">
       </div>
     </center>
@@ -394,47 +401,91 @@
           var s = str.replace (/[^\d]/g, ' ');
           s = s.replace(/\s{2,}/g, ' ');
           let numbers = s.split(' ');
+
+          let mobileTable = document.createElement('table');
+          mobileTable.classList.add('table', 'table-striped');
+
+          let mthead = document.createElement('thead');
+          mthead.classList.add('thead-dark');
+          let mrow = document.createElement('tr');
+          let mth = document.createElement('th');
+          mth.innerText = 'Mobile no Information';
+          mrow.appendChild(mth);
+          mthead.appendChild(mrow);
+          mobileTable.appendChild(mthead);
+
           for(var i = 0; i < numbers.length; i++) {
             if(numbers[i].length != 10)
               continue;
             var tstr = numbers[i];
+            let row = document.createElement('div');
+            row.classList.add('progress','skill-bar', 'm-2');
+            let td = document.createElement('span');
+            td.innerText = numbers[i];
+            td.classList.add("skill");
+            row.appendChild(td);
+            mobileTable.appendChild(row);
             var trep = '<span style="background:red">**Redacted Mobile Number**</span>'
             let reg = new RegExp(tstr,'ig');
             console.log(reg);
             str = str.replace(reg,trep);
           }
+          document.getElementById('mobile-table').appendChild(mobileTable);
+
           var p = str.replace(/[^\d]/g, ' ');
           console.log(p);
           p = p.replace(/\s{3,}/g, '-');
           console.log(p);
           let aadhaar = p.split('-');
           console.log(aadhaar);
+
+          let aadharTable = document.createElement('table');
+          aadharTable.classList.add('table', 'table-striped');
+
+          let thead = document.createElement('thead');
+          thead.classList.add('thead-dark');
+          let row = document.createElement('tr');
+          let th = document.createElement('th');
+          th.innerText = 'Aadhaar Information';
+          row.appendChild(th);
+          thead.appendChild(row);
+          aadharTable.appendChild(thead);
+
           for(var i = 0; i < aadhaar.length; i++) {
             if(aadhaar[i].indexOf(' ') >=0){
             var tstr = aadhaar[i];
-            var trep = '<span style="background:red">**Redacted Aadhaar Number**</span>'
+            let row = document.createElement('div');
+            row.classList.add('progress','skill-bar', 'm-2');
+            let td = document.createElement('span');
+            td.innerText = aadhaar[i];
+            td.classList.add("skill");
+            row.appendChild(td);
+            aadharTable.appendChild(row);
+            var trep = '<span style="background:red">{Redacted Aadhaar Number}</span>'
             let reg = new RegExp(tstr,'ig');
             console.log(reg);
             str = str.replace(reg,trep);
           }
           }
+          document.getElementById('aadhar-table').appendChild(aadharTable);
+
           for(var i = 0; i < emails.length; i++) {
             var tstr = emails[i].text;
-            var trep = '<span style="background:red">**Redacted Email Address**</span>'
+            var trep = '<span style="background:red">{Redacted Email Address}</span>'
             let reg = new RegExp(tstr,'ig');
             console.log(reg);
             str = str.replace(reg,trep);
           }
           for(var i = 0; i < persons.length; i++) {
             var tstr = persons[i].text;
-            var trep = '<span style="background:yellow">**Redacted Name**</span>'
+            var trep = '<span style="background:yellow">{Redacted Name}</span>'
             let reg = new RegExp(tstr,'ig');
             console.log(reg);
             str = str.replace(reg,trep);
           }
           for(var i = 0; i < locations.length; i++) {
             var tstr = locations[i].text;
-            var trep = '<span style="background:yellow">**Redacted Location**</span>'
+            var trep = '<span style="background:yellow">{Redacted Location}</span>'
             let reg = new RegExp(tstr,'ig');
             console.log(reg);
             str = str.replace(reg,trep);
@@ -452,8 +503,8 @@
   <footer class="row header-row m-0 w-100" style="padding-bottom:30px;padding-top:30px;">
     <!-- Copyright -->
     <div class="mx-auto ibm-header mt-0">
-      <h4 class="display-6 m-0" style="letter-spacing: 0.04em;"> 
-        Made with <i class="fas fa-heart"></i> on <a href="https://github.com/ajwad-shaikh/IBMocha"><i class="fab fa-github"> </i></a> at IBM Hackathon - Abhikalpan 2k19 
+      <h4 class="display-6 m-0" style="letter-spacing: 0.04em;">
+        Made with <i class="fas fa-heart"></i> on <a href="https://github.com/ajwad-shaikh/IBMocha"><i class="fab fa-github"> </i></a> at IBM Hackathon - Abhikalpan 2k19
       </h4>
     </div>
     <!-- Copyright -->
