@@ -18,7 +18,7 @@
 	border: none;
 	border-radius: 0;
 	background: #f0f0f0;
-	color: #2f3238;
+	color: #2f353f;
 	font-weight: bold;
 	font-family: 'Raleway', Arial, sans-serif;
 	-webkit-appearance: none; /* for box shadows to show on iOS */
@@ -83,7 +83,7 @@ input:invalid {
 	margin-top: 1.5em;
 	width: 100%;
 	background: transparent;
-	color: #2f3238;
+	color: #2f353f;
 	font-size: 1.25em;
 }
 
@@ -97,7 +97,7 @@ input:invalid {
 	padding: 0em;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	color: #2f3238;
+	color: #2f353f;
 	pointer-events: none;
 	-webkit-transform-origin: 0 0;
 	transform-origin: 0 0;
@@ -108,7 +108,7 @@ input:invalid {
 }
 
 .graphic--shoko {
-	stroke: #2f3238;
+	stroke: #2f353f;
 	pointer-events: none;
 	stroke-width: 2px;
 	top: 1.25em;
