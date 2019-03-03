@@ -2,16 +2,13 @@ const express = require('express');
 const bodyParser = require("body-parser");
 const nlu = require('./nluService');
 const app = express();
-const extractor = require('phone-number-extractor');
+// const extractor = require('phone-number-extractor');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
-exports.index = function(req, res) {
-    res.render('index', { extractor: extractor });
-}
 
 app.get('/', (req, res) => {
 	res.render('index', { data: false });
