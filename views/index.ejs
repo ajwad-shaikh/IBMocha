@@ -40,140 +40,6 @@
     .header-row {
       background-color: #2f353f;
     }
-
-    .ibm-header {
-      font-style: normal;
-      font-weight: 800;
-      color: #d0d1d0;
-      font-size: 8em;
-      line-height: 1;
-      margin: 0.25em 0 0;
-      letter-spacing: -1px;
-      text-align: center;
-    }
-
-    .ibm-header span {
-      display: block;
-      font-size: 30%;
-      font-weight: 400;
-      padding: 0.325em 0 1em 0;
-      color: #6c6c6c;
-    }
-
-    .button-submit {
-      margin-top: 56px;
-      background-color: transparent;
-      /* Green */
-      border: none;
-      height: 74px;
-      border-top: 3px solid #2f353f;
-      border-bottom: 3px solid #2f353f;
-      border-radius: 0px;
-      color: #2f353f;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-weight: 700;
-      font-size: calc(70.25*1.5)%;
-    }
-
-    .progress {
-      height: 35px;
-    }
-
-    .progress .skill {
-      line-height: 35px;
-      padding: 0;
-      margin: 0 0 0 20px;
-      text-transform: uppercase;
-    }
-
-    .progress .skill .val {
-      float: right;
-      font-style: normal;
-      margin: 0 20px 0 0;
-    }
-
-    .progress-bar {
-      text-align: left;
-      transition-duration: 3s;
-    }
-
-    .nav-item {
-      background-color: transparent;
-      border: 0px;
-      border-radius: 0px;
-      font-weight: 700;
-      font-size: calc(70.25*1.5)%;
-      font-family: 'Raleway', Arial, sans-serif;
-    }
-
-    .nav-tabs {
-      border-radius: 0px;
-      border: 0px;
-    }
-
-    .nav-item :hover {
-      border-radius: 0px;
-      border: 0px;
-    }
-
-    .nav-tabs .nav-link {
-      background-color: transparent;
-      color: #d0d1d0;
-      border: 0px;
-      border-top-left-radius: 0rem;
-      border-top-right-radius: 0rem;
-      outline: none;
-      padding: 20px;
-    }
-
-    .nav-tabs .nav-link.active {
-      background-color: #d0d1d0;
-      color: #2f353f;
-      border: 0px;
-      border-top-left-radius: 0rem;
-      border-top-right-radius: 0rem;
-    }
-
-    .skill {
-      font-size: 1rem;
-      font-weight: 1000;
-      text-transform: none !important;
-    }
-
-    .progress-bar {
-      background-color: #2f353f;
-    }
-
-    .progress {
-      background-color: #6c6c6c;
-    }
-
-    #preview {
-
-      <head><title>IBMocha | Contains Caffeine</title><link id="favicon"rel="icon"href="https://glitch.com/edit/favicon-app.ico"type="image/x-icon"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible"content="IE=edge"><meta name="viewport"content="width=device-width, initial-scale=1">< !-- import the webpage's stylesheet -->
-<link href="https://fonts.googleapis.com/css?family=Raleway"rel="stylesheet"><link rel="stylesheet"href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"crossorigin="anonymous"><link rel="stylesheet"href="/style.css"><link rel="stylesheet"type="text/css"href=" /set1.css"/>< !-- import the webpage's client-side javascript file -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"></script><link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"crossorigin="anonymous"><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-
-      crossorigin="anonymous"></script><script src="/client.js"defer></script><style>body {
-        margin: 0px;
-        font-family: 'Raleway', Arial, sans-serif;
-        background-color: #d0d1d0;
-      }
-
-      .header-row {
-        background-color: #2f3238;
-      }
-
       .ibm-header {
         font-style: normal;
         font-weight: 800;
@@ -565,7 +431,7 @@
           emails = <%- JSON.stringify(emails) %>;
       <% } %>
 
-        let persons =[];      
+        let persons =[];
       <% if (persons.length > 0) { %>
           persons = <%- JSON.stringify(persons) %>;
       <% } %>
@@ -659,7 +525,7 @@
             aadharTable.appendChild(thead);
 
             for (var i = 0; i < aadhaar.length; i++) {
-              if (aadhaar[i].indexOf(' ') >= 0) {
+              if (aadhaar[i].indexOf(' ') == 5) {
                 var tstr = aadhaar[i];
                 let row = document.createElement('div');
                 row.classList.add('progress', 'skill-bar', 'm-2');
@@ -707,7 +573,7 @@
             console.log({ str });
           }
         });
-      
+
       <% } %>
       /*$('prv-iframe').load(function () {
     alert('the iframe is done loading');
