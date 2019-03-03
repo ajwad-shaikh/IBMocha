@@ -379,7 +379,6 @@
           var s = str.replace (/[^\d]/g, ' ');
           s = s.replace(/\s{2,}/g, ' ');
           let numbers = s.split(' ');
-          console.log(numbers);
           for(var i = 0; i < numbers.length; i++) {
             if(numbers[i].length != 10)
               continue;
@@ -388,6 +387,21 @@
             let reg = new RegExp(tstr,'ig');
             console.log(reg);
             str = str.replace(reg,trep);
+          }
+          var p = str.replace(/[^\d]/g, ' ');
+          console.log(p);
+          p = p.replace(/\s{3,}/g, '-');
+          console.log(p);
+          let aadhaar = p.split('-');
+          console.log(aadhaar);
+          for(var i = 0; i < aadhaar.length; i++) {
+            if(aadhaar[i].indexOf(' ') >=0){
+            var tstr = aadhaar[i];
+            var trep = '<span style="background:red">**Redacted Aadhaar Number**</span>'
+            let reg = new RegExp(tstr,'ig');
+            console.log(reg);
+            str = str.replace(reg,trep);
+          }
           }
           for(var i = 0; i < emails.length; i++) {
             var tstr = emails[i].text;
