@@ -13,6 +13,18 @@ If you are a web-admin, you can use this code to look for potential exposure of 
 
 IBMocha is also modelled to target the recent [outbreak of Aadhaar Card Data](https://github.com/fs0c131y/AadhaarSearchEngine) that exploited search engine crawlers.
 
+### Exposures Identified
+
+1. Individual Names
+
+2. Location
+
+3. Email Addresses
+
+4. Phone numbers
+
+5. Aadhaar Numbers (primitive) (XXXX-XXXX-XXXX format)
+
 ### Development
 
 1. clone repo
@@ -29,4 +41,20 @@ IBMocha is also modelled to target the recent [outbreak of Aadhaar Card Data](ht
 
 5. `npm run serve` (`win-serve` if Windows Machine)
 
-6. open `localhost:8008`
+### Usage
+
+1. open `localhost:8008`
+
+2. There are two modes of input - **Text** and **URL**
+
+3. **URL Mode** - Enter URL and click on submit to analyse the website for personal information exposure using **IBM Watson NLU Service**
+
+4. **Text Mode** - Enter text and click on submit to analyse the text for personal information exposure using **IBM Watson NLU Service**.
+
+5. Text Mode also renders a redacted preview that masks personal information.
+
+### Further Development
+
+* Include PDF file input.
+* Include redacted website preview.
+* Include PDF output.
