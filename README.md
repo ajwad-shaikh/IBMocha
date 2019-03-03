@@ -3,7 +3,7 @@
 ### A Caffeinated Solution To Privacy
 
 ```
-Modern Problems Require Modern Solution
+Modern Problems Require Modern Solutions
 ```
 In the race to big data solutions and data-driven analytics, it is important to preserve the privacy of the information source as data propagates into the loops of the Internet.
 
