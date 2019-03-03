@@ -573,7 +573,7 @@
           let locations =[];
       <% if (locations.length > 0) { %>
           locations = <%- JSON.stringify(locations) %>;
-          
+
       <% } %>
 
           iframe = document.createElement('iframe');
@@ -629,7 +629,7 @@
               td.classList.add("skill");
               row.appendChild(td);
               mobileTable.appendChild(row);
-              var trep = '<span style="background:red">**Redacted Mobile Number**</span>'
+              var trep = `<span style="background:red">{Redacted Mobile Number${i+1}}</span>`
               let reg = new RegExp(tstr, 'ig');
               console.log(reg);
               str = str.replace(reg, trep);
@@ -670,7 +670,7 @@
                 td.classList.add("skill");
                 row.appendChild(td);
                 aadharTable.appendChild(row);
-                var trep = '<span style="background:red">{Redacted Aadhaar Number}</span>'
+                var trep = `<span style="background:red">{Redacted Aadhaar Number ${i+1}}</span>`
                 let reg = new RegExp(tstr, 'ig');
                 console.log(reg);
                 str = str.replace(reg, trep);
@@ -684,21 +684,21 @@
 
             for (var i = 0; i < emails.length; i++) {
               var tstr = emails[i].text;
-              var trep = '<span style="background:red">{Redacted Email Address}</span>'
+              var trep = `<span style="background:red">{Redacted Email Address ${i+1}}</span>`
               let reg = new RegExp(tstr, 'ig');
               console.log(reg);
               str = str.replace(reg, trep);
             }
             for (var i = 0; i < persons.length; i++) {
               var tstr = persons[i].text;
-              var trep = '<span style="background:yellow">{Redacted Name}</span>'
+              var trep = `<span style="background:yellow">{Redacted Name ${i+1}}</span>`
               let reg = new RegExp(tstr, 'ig');
               console.log(reg);
               str = str.replace(reg, trep);
             }
             for (var i = 0; i < locations.length; i++) {
               var tstr = locations[i].text;
-              var trep = '<span style="background:yellow">{Redacted Location}</span>'
+              var trep = `<span style="background:yellow">{Redacted Location ${i+1}}</span>`
               let reg = new RegExp(tstr, 'ig');
               console.log(reg);
               str = str.replace(reg, trep);
