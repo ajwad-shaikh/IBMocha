@@ -222,38 +222,38 @@
     </div>
 
     <% if(data){ %>
-      <% if(emails.length > 0){ %>
-        <div class="container w-100" style="padding-top: 100px">
-          <h2 class="display-4 text-center">Critical Exposure</h2>
-          <!-- <%=JSON.stringify(emails)%> -->
-          <table class="table table-striped">
-            <thead class="thead-dark">
-              <tr>
-                <th scope="col">Exposed Email Address</th>
-                <th scope="col">Relevance</th>
-              </tr>
-            </thead>
-          </table>
-          <% for(var i=0; i < emails.length; i++) { %>
+      <div class="container w-100" style="padding-top: 100px">
+        <% if(emails.length > 0){ %>
+            <h2 class="display-4 text-center">Critical Exposure</h2>
+            <!-- <%=JSON.stringify(emails)%> -->
+            <table class="table table-striped">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">Exposed Email Address</th>
+                  <th scope="col">Relevance</th>
+                </tr>
+              </thead>
+            </table>
+            <% for(var i=0; i < emails.length; i++) { %>
 
-            <div class="progress skill-bar m-2" style="background-color: rgb(203, 168, 168); ">
-              <div class="progress-bar progress-bar-success" role="progressbar"
-                aria-valuenow="<%= (emails[i].relevance) %>" aria-valuemin="0" aria-valuemax="100"
-                style="background-color: #cd0100 ">
-                <span class="skill"><%= emails[i].text %> - <%=emails[i].relevance%>%
-                  <!--(Count: <%= emails[i].count %>)-->
-                </span>
-                  <!--<i class="val"><%= emails[i].relevance*100 %>%</i>-->
+              <div class="progress skill-bar m-2" style="background-color: rgb(203, 168, 168); ">
+                <div class="progress-bar progress-bar-success" role="progressbar"
+                  aria-valuenow="<%= (emails[i].relevance) %>" aria-valuemin="0" aria-valuemax="100"
+                  style="background-color: #cd0100 ">
+                  <span class="skill"><%= emails[i].text %> - <%=emails[i].relevance%>%
+                    <!--(Count: <%= emails[i].count %>)-->
+                  </span>
+                    <!--<i class="val"><%= emails[i].relevance*100 %>%</i>-->
+                </div>
               </div>
-            </div>
-          <% } %>
-      <% } %>
-      <div id="aadhar-table">
-      </div>
+            <% } %>
+        <% } %>
+        <div id="aadhar-table">
+        </div>
 
-      <div id="mobile-table">
+        <div id="mobile-table">
+        </div>
       </div>
-    </div>
     <% if(persons.length > 0){ %>
     <!-- <%=JSON.stringify(persons)%> -->
 
@@ -425,6 +425,8 @@
             row.classList.add('progress','skill-bar', 'm-2');
             let td = document.createElement('span');
             td.innerText = numbers[i];
+            row.style.background = "#cd0100" ;
+            td.style.color = "#fff";
             td.classList.add("skill");
             row.appendChild(td);
             mobileTable.appendChild(row);
@@ -461,6 +463,8 @@
             row.classList.add('progress','skill-bar', 'm-2');
             let td = document.createElement('span');
             td.innerText = aadhaar[i];
+            row.style.background = "#cd0100" ;
+            td.style.color = "#fff";
             td.classList.add("skill");
             row.appendChild(td);
             aadharTable.appendChild(row);
