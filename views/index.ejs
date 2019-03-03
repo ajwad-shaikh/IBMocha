@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <title>IBMocha | Contains Caffeine</title>
-    <meta name="description" content="Caffeinated Solution To Privacy">
     <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -117,6 +116,7 @@
       .skill{
         font-size: 1rem;
         font-weight:1000;
+        text-transform: none !important;
       }
       .progress-bar {
         background-color: #2f3238;
@@ -236,10 +236,11 @@
           </table>
           <% for(var i=0; i < emails.length; i++) { %>
 
-            <div class="progress skill-bar m-2">
+            <div class="progress skill-bar m-2" style="background-color: rgb(203, 168, 168); ">
               <div class="progress-bar progress-bar-success" role="progressbar"
-                aria-valuenow="<%= 100*(emails[i].relevance) %>" aria-valuemin="0" aria-valuemax="100">
-                <span class="skill"><%= emails[i].text %> - <%=emails[i].relevance*100%>%
+                aria-valuenow="<%= (emails[i].relevance) %>" aria-valuemin="0" aria-valuemax="100"
+                style="background-color: #cd0100 ">
+                <span class="skill"><%= emails[i].text %> - <%=emails[i].relevance%>%
                   <!--(Count: <%= emails[i].count %>)-->
                 </span>
                   <!--<i class="val"><%= emails[i].relevance*100 %>%</i>-->
@@ -267,10 +268,11 @@
           </thead>
         </table>
         <% for(var i=0; i < persons.length; i++) { %>
-          <div class="progress skill-bar m-2">
-              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= 100*(persons[i].relevance) %>"
-                aria-valuemin="0" aria-valuemax="100">
-                  <span class="skill"><%= persons[i].text %> - <%= persons[i].relevance*100 %>%
+          <div class="progress skill-bar m-2" style="background-color: rgb(213, 212, 140); ">
+              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= (persons[i].relevance) %>"
+                aria-valuemin="0" aria-valuemax="100"
+                style="background-color: #ff9901  ">
+                  <span class="skill"><%= persons[i].text %> - <%= persons[i].relevance %>%
                     <!--<i class="val"><%= persons[i].relevance*100 %>%</i>-->
                   </span>
               </div>
@@ -293,10 +295,11 @@
         </thead>
       </table>
       <% for(var i=0; i < locations.length; i++) { %>
-        <div class="progress skill-bar m-2">
-            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= 100*(locations[i].relevance) %>"
-              aria-valuemin="0" aria-valuemax="100">
-                <span class="skill"><%= locations[i].text %> - <%= locations[i].relevance*100 %>%
+        <div class="progress skill-bar m-2" style="background-color: rgb(144, 200, 204); ">
+            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= (locations[i].relevance) %>"
+              aria-valuemin="0" aria-valuemax="100"
+              style="background-color: #0166cc ">
+                <span class="skill"><%= locations[i].text %> - <%= locations[i].relevance %>%
                   <!--<i class="val"><%= locations[i].relevance*100 %>%</i>-->
                 </span>
             </div>
