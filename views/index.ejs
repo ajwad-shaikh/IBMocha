@@ -146,7 +146,7 @@
 
       </div>
     </div>
-            
+
 
     <div class="row p-0 m-0">
       <div class="container w-100">
@@ -257,7 +257,7 @@
          <td><%= persons[i].relevance %></td>
          <td><%= persons[i].count %></td>
        </tr>-->
-       <div class="progress skill-bar "> 
+       <div class="progress skill-bar ">
            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= 100*(persons[i].relevance) %>" aria-valuemin="0" aria-valuemax="100">
                <span class="skill"><%= persons[i].text %> (Count: <%= persons[i].count %>)<i class="val"><%= persons[i].relevance*100 %>%</i></span>
            </div>
@@ -290,8 +290,8 @@
       <h2 class="display-4 text-center"> No Sensitive Exposure Found! :) </h2>
     <% } %>
     <% } %>
-	
-	<div id="preview" style="width: 100%; height: 350px"></div>
+
+	<center> <div id="preview" style="width: 100%; height: 550px"></div> </center>
     <script src="/classie.js"></script>
     <script>
         (function() {
@@ -341,11 +341,11 @@
 			   <% if(data){ %>
 				let text = "<%= text %>";
 				let url = "<%= url %>";
-		
+
 				iframe = document.createElement('iframe');
 				iframe.id = 'prv-iframe'
-				iframe.style.width = "95%";
-				iframe.style.height = "600px";
+				iframe.style.width = "80%";
+				iframe.style.height = "500px";
 				if (url) {
 					console.log(url);
 					iframe.src = url;
@@ -362,7 +362,7 @@
 					let window = iframe.contentWindow;
 					//window.location = url;
 					window.document.innerHTML = text;
-					
+
 				});
 				<% } %>
 						/*$('prv-iframe').load(function () {
