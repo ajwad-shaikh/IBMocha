@@ -342,7 +342,9 @@
 				let text = "<%= text %>";
 				let url = "<%= url %>";
         let emails = <%- JSON.stringify(emails) %>;
-        console.log(emails);
+        let persons = <%- JSON.stringify(persons) %>;
+        let locations = <%- JSON.stringify(locations) %>;
+
 				iframe = document.createElement('iframe');
 				iframe.id = 'prv-iframe'
 				iframe.style.width = "80%";
@@ -374,10 +376,36 @@
             console.log('iframe is completely loaded');
           })
           var str = iframeWindow.document.body.innerHTML;
-          console.log({str});
+          var s = str.replace (/[^\d]/g, ' ');
+          s = s.replace(/\s{2,}/g, ' ');
+          let numbers = s.split(' ');
+          console.log(numbers);
+          for(var i = 0; i < numbers.length; i++) {
+            if(numbers[i].length != 10)
+              continue;
+            var tstr = numbers[i];
+            var trep = '<span style="background:red">**Redacted Mobile Number**</span>'
+            let reg = new RegExp(tstr,'ig');
+            console.log(reg);
+            str = str.replace(reg,trep);
+          }
           for(var i = 0; i < emails.length; i++) {
             var tstr = emails[i].text;
-            var trep = '<span style="background:red">Redacted Email Address</span>'
+            var trep = '<span style="background:red">**Redacted Email Address**</span>'
+            let reg = new RegExp(tstr,'ig');
+            console.log(reg);
+            str = str.replace(reg,trep);
+          }
+          for(var i = 0; i < persons.length; i++) {
+            var tstr = persons[i].text;
+            var trep = '<span style="background:yellow">**Redacted Name**</span>'
+            let reg = new RegExp(tstr,'ig');
+            console.log(reg);
+            str = str.replace(reg,trep);
+          }
+          for(var i = 0; i < locations.length; i++) {
+            var tstr = locations[i].text;
+            var trep = '<span style="background:yellow">**Redacted Location**</span>'
             let reg = new RegExp(tstr,'ig');
             console.log(reg);
             str = str.replace(reg,trep);
