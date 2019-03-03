@@ -21,10 +21,12 @@ IBMocha is also modelled to target the recent [outbreak of Aadhaar Card Data](ht
 
 2. `cd IBMocha`
 
-3. Install dependency
+3. Install dependencies
 
     `npm install`
 
-4. `npm run serve`
+4. `npm install nodemon -g`
 
-5. open `localhost:8008`
+5. `npm run serve` (`win-serve` if Windows Machine)
+
+6. open `localhost:8008`
