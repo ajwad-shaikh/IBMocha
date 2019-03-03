@@ -348,22 +348,29 @@
 				iframe.style.height = "600px";
 				if (url) {
 					console.log(url);
-					iframe.src = url;
+					// iframe.src = url;
 				}
 				else {
 					console.log(text);
-					iframe.body = text
+					// iframe.body = text
 				}
 				$('#preview').append(iframe);
+				let iframeWindow = iframe.contentWindow;
 				console.log($('prv-iframe'));
+				
 				$(document).ready(() => {
 					console.log('ready');
 					//$("#prv-frame").attr("src", url);
-					let window = iframe.contentWindow;
-					//window.location = url;
-					window.document.innerHTML = text;
-					
+					if(url){
+						iframeWindow.location = url;
+					}
+					else if(text){
+						console.log(iframeWindow.document.body);
+						iframeWindow.document.body.innerHTML = text;
+						// let body = window.document.getElementsbyTagName('body')[0];
+					}	
 				});
+
 				<% } %>
 						/*$('prv-iframe').load(function () {
 					alert('the iframe is done loading');
