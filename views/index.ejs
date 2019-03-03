@@ -338,6 +338,7 @@
            });
 	   </script>
 	   	<script>
+			   <% if(data){ %>
 				let text = "<%= text %>";
 				let url = "<%= url %>";
 		
@@ -347,7 +348,7 @@
 				iframe.style.height = "600px";
 				if (url) {
 					console.log(url);
-					// iframe.src = url;
+					iframe.src = url;
 				}
 				else {
 					console.log(text);
@@ -358,10 +359,12 @@
 				$(document).ready(() => {
 					console.log('ready');
 					//$("#prv-frame").attr("src", url);
-					let window = iframe.contentWindow
-					window.location = url;
+					let window = iframe.contentWindow;
+					//window.location = url;
+					window.document.innerHTML = text;
 					
 				});
+				<% } %>
 						/*$('prv-iframe').load(function () {
 					alert('the iframe is done loading');
 				});*/
