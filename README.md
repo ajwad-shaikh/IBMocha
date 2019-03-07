@@ -5,6 +5,9 @@
 ```
 Modern Problems Require Modern Solutions
 ```
+
+![IBMocha Home Page Image](https://raw.githubusercontent.com/ajwad-shaikh/IBMocha/master/screenshots/IBMocha_1.png)
+
 In the race to big data solutions and data-driven analytics, it is important to preserve the privacy of the information source as data propagates into the loops of the Internet.
 
 IBMocha is a hack on IBM Watson NLU tools to utilize the power of Machine Learning Cloud Infrastructure to redact sensitive information on the Internet.
@@ -27,7 +30,7 @@ IBMocha is also modelled to target the recent [outbreak of Aadhaar Card Data](ht
 
 ### Development
 
-1. clone repo
+1. Clone repo
 
     `git clone https://github.com/ajwad-shaikh/IBMocha.git`
 
@@ -49,12 +52,25 @@ IBMocha is also modelled to target the recent [outbreak of Aadhaar Card Data](ht
 
 3. **URL Mode** - Enter URL and click on submit to analyse the website for personal information exposure using **IBM Watson NLU Service**
 
+![IBMocha URL Input](https://raw.githubusercontent.com/ajwad-shaikh/IBMocha/master/screenshots/IBMocha_3.png)
+
+![IBMocha Exposures](https://raw.githubusercontent.com/ajwad-shaikh/IBMocha/master/screenshots/IBMocha_4.png)
+
 4. **Text Mode** - Enter text and click on submit to analyse the text for personal information exposure using **IBM Watson NLU Service**.
 
+![IBMocha Text Exposures](https://raw.githubusercontent.com/ajwad-shaikh/IBMocha/master/screenshots/IBMocha_2.png)
+
+![IBMocha Corrective Exposures](https://raw.githubusercontent.com/ajwad-shaikh/IBMocha/master/screenshots/IBMocha_5.png)
+
 5. Text Mode also renders a redacted preview that masks personal information.
+
+![IBMocha Redaction](https://raw.githubusercontent.com/ajwad-shaikh/IBMocha/master/screenshots/IBMocha_7.png)
 
 ### Further Development
 
 * Include PDF file input.
 * Include redacted website preview.
 * Include PDF output.
+
+
+![IBMocha Full screenshot](https://raw.githubusercontent.com/ajwad-shaikh/IBMocha/master/screenshots/IBMocha_6.png)
