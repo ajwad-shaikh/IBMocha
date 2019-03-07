@@ -28,6 +28,30 @@ IBMocha is also modelled to target the recent [outbreak of Aadhaar Card Data](ht
 
 5. Aadhaar Numbers (primitive) (XXXX-XXXX-XXXX format)
 
+### Get API credentials
+
+1. Go to [IBM Cloud Console](https://console.bluemix.net/dashboard/apps/) -> Login/Register -> Visit Dashboard
+
+5. Visit Catalog -> AI -> Natural Language Understanding or visit [Natural Language Understanding](https://console.bluemix.net/catalog/services/natural-language-understanding)
+
+6. Create a Watson NLU Service
+
+7. Go to [Dashboard](https://console.bluemix.net/dashboard/apps/)
+
+8. Select your newly created Natural Language Understanding service
+
+9. Go to Service Credentials tab
+
+10. Create new credentials if it doesn't show up
+
+11. Click view credentials
+
+12. Create `config.json` in root directory of repo
+
+13. Paste the credentials in json format in `config.json`
+
+14. Add `config.json` to `.gitignore` to avoid misuse
+
 ### Development
 
 1. Clone repo
@@ -40,9 +64,9 @@ IBMocha is also modelled to target the recent [outbreak of Aadhaar Card Data](ht
 
     `npm install`
 
-4. `npm install nodemon -g`
+14. `npm install nodemon -g`
 
-5. `npm run serve` (`win-serve` if Windows Machine)
+15. `npm run serve` (`win-serve` if Windows Machine)
 
 ### Usage
 
